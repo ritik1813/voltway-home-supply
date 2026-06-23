@@ -348,7 +348,7 @@ nav.main {
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(185deg, rgba(11,27,43,0.92) 0%, rgba(11,27,43,0.82) 45%, rgba(6,17,28,0.94) 100%);
+    linear-gradient(185deg, rgba(11,27,43,0.58) 0%, rgba(11,27,43,0.38) 45%, rgba(6,17,28,0.62) 100%);
 }
 
 .hero-inner {
@@ -359,8 +359,22 @@ nav.main {
   padding: 0 32px;
 }
 
+.hero-inner--video {
+  display: flex;
+  justify-content: center;
+}
+
 .hero-inner--video .hero-copy {
   max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-inner--video .hero-trust {
+  align-self: stretch;
+  justify-content: center;
 }
 
 .hero--video {
@@ -379,11 +393,12 @@ nav.main {
   font-weight: 600;
   letter-spacing: 0.08em;
   color: var(--cyan-light);
-  background: rgba(43,183,166,0.1);
-  border: 1px solid rgba(43,183,166,0.25);
+  background: rgba(11,27,43,0.5);
+  border: 1px solid rgba(43,183,166,0.4);
   padding: 8px 16px;
   border-radius: 100px;
   margin-bottom: 28px;
+  backdrop-filter: blur(4px);
 }
 
 .eyebrow .pulse {
@@ -413,6 +428,7 @@ nav.main {
   font-weight: 700;
   margin-bottom: 24px;
   letter-spacing: -0.03em;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.5);
 }
 
 .hero h1 .accent {
@@ -423,10 +439,11 @@ nav.main {
 
 .hero p.lead {
   font-size: 18.5px;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.92);
   max-width: 540px;
-  margin-bottom: 36px;
+  margin: 0 auto 36px;
   line-height: 1.7;
+  text-shadow: 0 1px 10px rgba(0,0,0,0.45);
 }
 
 .hero-actions {
@@ -449,7 +466,8 @@ nav.main {
   align-items: center;
   gap: 10px;
   font-size: 13.5px;
-  color: rgba(248, 246, 240, 0.8);
+  color: rgba(248, 246, 240, 0.92);
+  text-shadow: 0 1px 8px rgba(0,0,0,0.5);
 }
 
 .hero-trust svg {
