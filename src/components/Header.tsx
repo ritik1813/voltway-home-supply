@@ -24,7 +24,8 @@ export function Header() {
           </span>
         </a>
         <div className={`nav-links${menuOpen ? ' open' : ''}`}>
-          <a href="#capabilities" onClick={() => setMenuOpen(false)}>What We Deal In</a>
+          <a href="#capabilities" onClick={() => setMenuOpen(false)}>Specialisations</a>
+          <a href="#estimator" onClick={() => setMenuOpen(false)}>Estimator</a>
           <a href="#packages" onClick={() => setMenuOpen(false)}>Solutions</a>
           <a href="#process" onClick={() => setMenuOpen(false)}>How It Works</a>
           <a href="#why" onClick={() => setMenuOpen(false)}>Why Us</a>

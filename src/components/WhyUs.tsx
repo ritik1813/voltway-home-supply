@@ -1,22 +1,22 @@
 const WHY_ITEMS = [
   {
-    title: 'Authorised sourcing',
-    desc: 'Material is sourced directly from authorised brand distributors, not the grey market.',
+    title: '100% Certified Sourcing',
+    desc: 'Every length of wire, pipe, or smart module is pulled directly from authorised brand distributors. We enforce a strict zero grey-market policy.',
     path: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z',
   },
   {
-    title: 'Quoted against your material list',
-    desc: "We confirm material and rates upfront, so what's delivered matches what's on your list.",
+    title: 'Transparent BOQ Matching',
+    desc: 'We verify and quote against your exact bill of quantities. Rates are locked prior to dispatch so there are never invoice surprises.',
     path: 'M12 8v4l3 3M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
   },
   {
-    title: 'Electrical, plumbing and automation, one dealer',
-    desc: 'Order all three from one account instead of coordinating separate vendors.',
+    title: 'Single-Vendor Convenience',
+    desc: 'Consolidate electrical, plumbing, and home automation materials under one trade account to streamline your billing and logistics.',
     path: 'M3 3v18h18M7 14l4-4 3 3 5-6',
   },
   {
-    title: 'Reorder without requoting',
-    desc: 'Builders running multiple phases can reorder against the same account and material list.',
+    title: 'Phase-Wise Account Standing',
+    desc: 'Reorder for upcoming construction phases or additional units instantly. Keep your site moving without repeating the quoting cycle.',
     path: 'M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2',
   },
 ];

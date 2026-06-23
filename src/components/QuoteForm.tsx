@@ -15,13 +15,12 @@ export function QuoteForm() {
       <div className="wrap">
         <div className="quote-grid">
           <div className="quote-info">
-            <span className="kicker">Get in touch</span>
+            <span className="kicker">Procurement Request</span>
             <h2 style={{ fontSize: 'clamp(26px,3vw,32px)', marginBottom: '14px' }}>
-              Tell us what you're building.
+              Request a trade quotation.
             </h2>
             <p>
-              Share your material list or project scope and we'll send back a quote at current
-              rates — no inflated pricing, no pushy sales calls.
+              Submit your architectural bill of quantities (BOQ) or material list. Our procurement team will verify your requirements and deliver a transparent, itemised quote at direct trade rates.
             </p>
 
             <div style={{ marginTop: '30px' }}>

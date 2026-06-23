@@ -35,10 +35,10 @@ export function Footer() {
           <div className="footer-col">
             <h5>Company</h5>
             <ul>
-              <li><a href="#capabilities">What We Deal In</a></li>
+              <li><a href="#capabilities">Specialisations</a></li>
+              <li><a href="#estimator">Material Estimator</a></li>
               <li><a href="#packages">Solutions</a></li>
               <li><a href="#why">Why Us</a></li>
-              <li><a href="#faq">FAQ</a></li>
             </ul>
           </div>
           <div className="footer-col">

@@ -6,13 +6,13 @@ export function CtaBand() {
       <div className="wrap">
         <div className="cta-band">
           <div>
-            <h3>Need electrical, plumbing or automation material?</h3>
-            <p>Send your material list or BOQ on WhatsApp — get a quote within 24 hours, for one flat or a full project.</p>
+            <h3>Ready to source your project materials?</h3>
+            <p>Send your material list or BOQ over WhatsApp. We will deliver a comprehensive, brand-wise trade quote within 24 hours.</p>
           </div>
           <div className="actions">
             <a href="https://wa.me/919999999999" className="btn btn-light">
               <WhatsAppIcon />
-              WhatsApp Now
+              WhatsApp BOQ Now
             </a>
             <a href="#quote" className="btn" style={{ background: 'var(--navy)', color: '#fff' }}>
               Fill Quote Form

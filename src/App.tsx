@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { TrustStrip } from './components/TrustStrip';
 import { Capabilities } from './components/Capabilities';
+import { MaterialEstimator } from './components/MaterialEstimator';
 import { Packages } from './components/Packages';
 import { Process } from './components/Process';
 import { WhyUs } from './components/WhyUs';
@@ -21,6 +22,7 @@ function App() {
       <Hero />
       <TrustStrip />
       <Capabilities />
+      <MaterialEstimator />
       <Packages />
       <Process />
       <WhyUs />

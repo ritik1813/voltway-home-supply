@@ -3,23 +3,23 @@ import { ArrowRightIcon, CheckIcon } from './icons';
 const PACKAGES = [
   {
     tag: 'FLAT OWNERS & DESIGNERS',
-    title: 'Single Flat & Fit-Out Supply',
-    desc: 'Material and fittings for one flat or a design specification — the same sourcing and pricing approach we use for larger orders.',
-    items: ['Matched to your floor plan or spec', 'Brand and finish selection support', 'Same authorised sourcing as larger orders'],
+    title: 'Individual Flat Supply',
+    desc: 'Bespoke material packages for single apartment renovations or fit-outs. We match your designer specifications with direct-from-distributor pricing.',
+    items: ['Precision matching to your floor plan', 'Authentic brands & finish support', 'Direct trade rates, no retail markups'],
     featured: false,
   },
   {
     tag: 'CONTRACTORS & MEP TEAMS',
-    title: 'Site Material Supply',
-    desc: 'Electrical, plumbing and automation material matched to your BOQ for an active site — ordered once, delivered as work progresses.',
-    items: ['BOQ-matched material list', 'Mid-project top-up orders', 'Direct coordination with your site engineer'],
+    title: 'Contractor Site Supply',
+    desc: 'On-demand electrical and plumbing materials matched to your site BOQ. We keep your project on schedule with coordinated dispatch.',
+    items: ['Precise BOQ alignment & verification', 'Flexible mid-project top-up orders', 'Dedicated logistics coordinator for site delivery'],
     featured: false,
   },
   {
     tag: 'BUILDERS & DEVELOPERS',
-    title: 'Bulk Project Supply',
-    desc: 'Standing or phase-wise material supply for ongoing flat construction — trade pricing, scheduled site dispatch, one account across every tower.',
-    items: ['Trade pricing on volume orders', 'Phase-wise or scheduled site delivery', 'One consolidated account & billing cycle'],
+    title: 'Bulk Project Partnerships',
+    desc: 'Consolidated, phase-wise supply agreements for large residential developments. Maximise your margins with wholesale pricing tiers.',
+    items: ['Wholesale volume discount structures', 'Scheduled, phase-aligned site deliveries', 'Single commercial account & billing history'],
     featured: true,
   },
 ];

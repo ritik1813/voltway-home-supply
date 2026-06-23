@@ -3,11 +3,10 @@ export function Capabilities() {
     <section id="capabilities">
       <div className="wrap">
         <div className="section-head">
-          <span className="kicker">What we deal in</span>
-          <h2>Electrical, plumbing and home automation material.</h2>
+          <span className="kicker">Core Specialisations</span>
+          <h2>Top-tier materials, sourced directly.</h2>
           <p>
-            Send us your material list or BOQ and we quote against current rates from our dealer
-            network — for one flat or a full project.
+            We supply an exhaustive range of electrical infrastructure, sanitary networks, and smart technologies—all consolidated to match your exact floor plan or bill of quantities.
           </p>
         </div>
 
@@ -18,17 +17,15 @@ export function Capabilities() {
                 <path d="M13 2L4.5 13.5H11L10 22L19 9.5H12.5L13 2Z" />
               </svg>
             </div>
-            <h3>Electrical Supply</h3>
+            <h3>Electrical Infrastructure</h3>
             <p>
-              Wires, MCBs, distribution boards, switchgear and fittings, supplied against your
-              material list.
+              Authorised cables, switchgears, distribution systems, and conduit piping for high-performance residential power distribution.
             </p>
             <div className="cap-tags">
-              <span>Wires &amp; Cables</span>
-              <span>MCBs &amp; DBs</span>
-              <span>Switches</span>
-              <span>Lights &amp; Fans</span>
-              <span>Panels</span>
+              <span>Polycab &amp; Havells Wires</span>
+              <span>Legrand MCBs</span>
+              <span>L&amp;T Switchgears</span>
+              <span>Conduits &amp; Fittings</span>
             </div>
           </div>
 
@@ -38,17 +35,15 @@ export function Capabilities() {
                 <path d="M9 3h6v4l4 4v4a4 4 0 01-4 4H9a4 4 0 01-4-4v-4l4-4V3z" />
               </svg>
             </div>
-            <h3>Plumbing Supply</h3>
+            <h3>Plumbing &amp; Sanitary</h3>
             <p>
-              CPVC/PVC piping, bathroom and kitchen fittings, sanitaryware and tanks, sourced from
-              authorised distributors.
+              Lead-free CPVC/PVC water lines, high-density drainage networks, sanitaryware, and premium brass fittings sourced from direct trade partners.
             </p>
             <div className="cap-tags">
-              <span>CPVC/PVC Pipes</span>
-              <span>Taps &amp; Mixers</span>
-              <span>Sanitaryware</span>
-              <span>Tanks</span>
-              <span>Fittings</span>
+              <span>Astral CPVC/PVC</span>
+              <span>Supreme Drainage</span>
+              <span>Jaquar Fittings</span>
+              <span>Hindware Sanitary</span>
             </div>
           </div>
 
@@ -58,17 +53,15 @@ export function Capabilities() {
                 <path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01" />
               </svg>
             </div>
-            <h3>Home Automation Supply</h3>
+            <h3>Smart Home Automation</h3>
             <p>
-              WiFi switches, smart lighting, video door units, sensors and cameras, supplied
-              alongside your electrical material.
+              App-controlled modular WiFi switches, smart lighting systems, security cameras, smart locks, and sensors for modern intelligent living.
             </p>
             <div className="cap-tags">
-              <span>WiFi Switches</span>
-              <span>Smart Lighting</span>
-              <span>Cameras</span>
-              <span>Smart Locks</span>
-              <span>Sensors</span>
+              <span>Smart Touch Plates</span>
+              <span>Wipro Smart lighting</span>
+              <span>Yale Smart Locks</span>
+              <span>IoT Gateways</span>
             </div>
           </div>
         </div>
