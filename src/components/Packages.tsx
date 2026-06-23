@@ -2,24 +2,24 @@ import { ArrowRightIcon, CheckIcon } from './icons';
 
 const PACKAGES = [
   {
-    tag: 'NEW FLAT OWNERS',
-    title: 'Complete Flat Supply',
-    desc: 'Full electrical + plumbing material for a new or under-construction flat, planned against your floor plan.',
-    items: ['Room-wise material list & quote', 'Single delivery, single invoice', 'Electrician/plumber coordination'],
-    featured: false,
-  },
-  {
-    tag: 'MOST REQUESTED',
-    title: 'Smart Home Setup',
-    desc: 'Make your new flat automation-ready — switches, lighting and security planned before wiring closes.',
-    items: ['WiFi switch & smart lighting layout', 'Video door phone & camera points', 'App setup & demo on handover'],
+    tag: 'BUILDERS & DEVELOPERS',
+    title: 'Bulk Project Supply',
+    desc: 'Standing or phase-wise material supply for ongoing flat construction — trade pricing, scheduled site dispatch, one account across every tower.',
+    items: ['Trade pricing on volume orders', 'Phase-wise / scheduled site delivery', 'Single consolidated account & billing cycle'],
     featured: true,
   },
   {
-    tag: 'BUILDERS & CONTRACTORS',
-    title: 'Bulk Project Supply',
-    desc: 'Ongoing material supply for multiple flats or sites, with trade pricing and flexible billing cycles.',
-    items: ['Volume / trade pricing', 'Scheduled site deliveries', 'Dedicated account contact'],
+    tag: 'CONTRACTORS & MEP TEAMS',
+    title: 'Site Material Supply',
+    desc: 'Electrical and plumbing material matched to your BOQ for an active site — ordered once, delivered as work progresses.',
+    items: ['BOQ-matched material list', 'Mid-project top-up orders', 'Direct coordination with your site engineer'],
+    featured: false,
+  },
+  {
+    tag: 'ARCHITECTS & DESIGNERS',
+    title: 'Spec & Fit-Out Supply',
+    desc: 'Switch, sanitaryware and fitting selections sourced to match your design specification, from a single unit to a full project.',
+    items: ['Brand & finish matching to spec', 'Sample/selection support before bulk order', 'Supply across single units to full projects'],
     featured: false,
   },
 ];
@@ -29,11 +29,11 @@ export function Packages() {
     <section className="pkg-section" id="packages">
       <div className="wrap">
         <div className="section-head center">
-          <span className="kicker">Solutions, not just supply</span>
-          <h2>Built around how people actually buy.</h2>
+          <span className="kicker">Bulk supply structures</span>
+          <h2>Built for how bulk buyers actually order.</h2>
           <p>
-            Whether you're moving into a new flat, renovating, or managing a builder project —
-            pick the path that fits.
+            Builders, contractors and design teams each order differently. Pick the structure
+            that matches how your project runs.
           </p>
         </div>
 

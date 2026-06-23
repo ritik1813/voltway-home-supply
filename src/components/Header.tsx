@@ -20,14 +20,14 @@ export function Header() {
         <a href="#top" className="logo">
           <LogoMark />
           <span>
-            Voltway<span className="sub">Home Supply Co.</span>
+            JP Pro Supply<span className="sub">Electrical &amp; Plumbing Supply</span>
           </span>
         </a>
         <div className={`nav-links${menuOpen ? ' open' : ''}`}>
           <a href="#capabilities" onClick={() => setMenuOpen(false)}>What We Deal In</a>
-          <a href="#packages" onClick={() => setMenuOpen(false)}>Solutions</a>
+          <a href="#packages" onClick={() => setMenuOpen(false)}>Bulk Solutions</a>
           <a href="#process" onClick={() => setMenuOpen(false)}>How It Works</a>
-          <a href="#why" onClick={() => setMenuOpen(false)}>Why Voltway</a>
+          <a href="#why" onClick={() => setMenuOpen(false)}>Why Us</a>
           <a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
         </div>
         <div className="nav-cta">

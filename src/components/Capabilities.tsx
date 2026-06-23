@@ -4,11 +4,10 @@ export function Capabilities() {
       <div className="wrap">
         <div className="section-head">
           <span className="kicker">What we deal in</span>
-          <h2>Three categories, one reliable supplier.</h2>
+          <h2>Two trades, stocked and supplied at scale.</h2>
           <p>
-            We don't run a catalogue store. Tell us your flat size or material list, and we'll
-            quote real current prices from our dealer network — not fixed online rates that go
-            stale.
+            Send us your BOQ or site material list and we quote against current trade rates from
+            our dealer network — not fixed catalogue prices that go stale before you order.
           </p>
         </div>
 
@@ -21,8 +20,8 @@ export function Capabilities() {
             </div>
             <h3>Electrical Supply</h3>
             <p>
-              Complete house wiring material to fittings — everything an electrician or new flat
-              needs, in one order.
+              Wires, MCBs, distribution boards, switchgear and fittings — supplied against your
+              site material list, not bought piecemeal across multiple counters.
             </p>
             <div className="cap-tags">
               <span>Wires &amp; Cables</span>
@@ -41,8 +40,8 @@ export function Capabilities() {
             </div>
             <h3>Plumbing Supply</h3>
             <p>
-              Pipes, fittings and sanitaryware sourced from trusted brands — for bathrooms,
-              kitchens and full builds.
+              CPVC/PVC piping, bathroom and kitchen fittings, sanitaryware and tanks — sourced
+              from authorised distributors and dispatched to site in bulk.
             </p>
             <div className="cap-tags">
               <span>CPVC/PVC Pipes</span>
@@ -50,27 +49,6 @@ export function Capabilities() {
               <span>Sanitaryware</span>
               <span>Tanks</span>
               <span>Fittings</span>
-            </div>
-          </div>
-
-          <div className="cap-card smart">
-            <div className="cap-badge">TRENDING</div>
-            <div className="icon-box">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01" />
-              </svg>
-            </div>
-            <h3>Smart Home &amp; Automation</h3>
-            <p>
-              WiFi switches, smart lighting, video door phones, sensors and cameras — designed in
-              at the wiring stage.
-            </p>
-            <div className="cap-tags">
-              <span>WiFi Switches</span>
-              <span>Smart Lighting</span>
-              <span>Cameras</span>
-              <span>Smart Locks</span>
-              <span>Sensors</span>
             </div>
           </div>
         </div>

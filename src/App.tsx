@@ -6,7 +6,7 @@ import { Capabilities } from './components/Capabilities';
 import { Packages } from './components/Packages';
 import { Process } from './components/Process';
 import { WhyUs } from './components/WhyUs';
-import { Testimonials } from './components/Testimonials';
+import { HowWeOperate } from './components/HowWeOperate';
 import { CtaBand } from './components/CtaBand';
 import { QuoteForm } from './components/QuoteForm';
 import { Faq } from './components/Faq';
@@ -24,7 +24,7 @@ function App() {
       <Packages />
       <Process />
       <WhyUs />
-      <Testimonials />
+      <HowWeOperate />
       <CtaBand />
       <QuoteForm />
       <Faq />

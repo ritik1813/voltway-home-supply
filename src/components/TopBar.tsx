@@ -11,7 +11,7 @@ export function TopBar() {
           </a>
         </div>
         <div className="left">
-          <a href="#quote">GST Billed Invoices</a>
+          <a href="#quote">Bulk &amp; Trade Orders Welcome</a>
           <a href="#quote">Mon–Sat, 9:30am–7:30pm</a>
         </div>
       </div>

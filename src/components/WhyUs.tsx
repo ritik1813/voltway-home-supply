@@ -5,27 +5,27 @@ const WHY_ITEMS = [
     path: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z',
   },
   {
-    title: 'No site visits wasted',
-    desc: "We quote and confirm material upfront, so deliveries match what's actually needed.",
+    title: 'Quoted against your BOQ',
+    desc: "We confirm material and rates upfront, so dispatch matches what's actually on your list.",
     path: 'M12 8v4l3 3M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
   },
   {
-    title: 'One supplier, three categories',
-    desc: 'Stop coordinating three vendors — electrical, plumbing and automation in one order.',
+    title: 'One dealer, full scope',
+    desc: 'Stop coordinating separate electrical and plumbing vendors — order both on one account, one delivery schedule.',
     path: 'M3 3v18h18M7 14l4-4 3 3 5-6',
   },
   {
-    title: 'GST billing, every time',
-    desc: 'Clean invoices for your records, your builder, or your interior designer.',
+    title: 'Built for repeat, multi-site orders',
+    desc: 'Standing accounts for builders running multiple towers or phases — reorder without requoting from scratch.',
     path: 'M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2',
   },
 ];
 
 const STATS = [
   { n: 'Direct', l: 'Sourcing from authorised dealers' },
-  { n: '3-in-1', l: 'Electrical, plumbing & automation' },
+  { n: '2 Trades', l: 'Electrical & plumbing, one account' },
   { n: 'Gurgaon', l: 'Based here, deliver across NCR' },
-  { n: '100%', l: 'GST-billed orders' },
+  { n: 'Bulk', l: 'Order capacity for active project sites' },
 ];
 
 export function WhyUs() {
@@ -34,7 +34,7 @@ export function WhyUs() {
       <div className="wrap">
         <div className="why-grid">
           <div>
-            <span className="kicker">Why Voltway</span>
+            <span className="kicker">Why JP Pro Supply</span>
             <h2 style={{ fontSize: 'clamp(26px,3vw,34px)', marginBottom: '30px' }}>
               Built for people who can't afford to get this wrong.
             </h2>

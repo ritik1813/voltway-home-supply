@@ -213,18 +213,38 @@ nav.main{
 .panel-foot .cell .num{font-family:'Space Grotesk'; font-size:20px; font-weight:700; color:#fff;}
 .panel-foot .cell .lbl{font-size:10.5px; color:rgba(247,244,236,0.55); margin-top:2px; text-transform:uppercase; letter-spacing:0.05em;}
 
-/* ---------- Trust strip ---------- */
+/* ---------- Trust strip / brand marquee ---------- */
 .trust-strip{
   background:var(--paper-2);
   border-bottom:1px solid var(--line);
   padding:22px 0;
 }
 .trust-strip .wrap{
-  display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  display:flex; flex-direction:column; gap:14px;
 }
-.trust-strip .label{font-size:12px; font-family:'JetBrains Mono'; color:var(--slate); letter-spacing:0.05em; text-transform:uppercase; flex-shrink:0;}
-.brand-row{display:flex; gap:34px; align-items:center; flex-wrap:wrap; opacity:0.82;}
-.brand-row .b{font-family:'Space Grotesk'; font-weight:600; font-size:15.5px; color:var(--navy); letter-spacing:0.01em;}
+.trust-strip .label{font-size:12px; font-family:'JetBrains Mono'; color:var(--slate); letter-spacing:0.05em; text-transform:uppercase;}
+.brand-marquee{
+  overflow:hidden; width:100%;
+  mask-image:linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
+  -webkit-mask-image:linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
+}
+.brand-track{
+  display:flex; align-items:center; gap:48px; width:max-content;
+  animation:brand-scroll 30s linear infinite;
+}
+.brand-track:hover{animation-play-state:paused;}
+@keyframes brand-scroll{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+.brand-logo{
+  display:flex; align-items:center; gap:8px; flex-shrink:0; white-space:nowrap;
+  font-family:'Space Grotesk'; font-weight:700; font-size:16px; color:var(--navy); opacity:0.78;
+}
+.brand-logo .mark{width:7px; height:7px; border-radius:2px; background:var(--copper); flex-shrink:0; transform:rotate(45deg);}
+@media (prefers-reduced-motion: reduce){
+  .brand-track{animation:none; transform:none;}
+}
 
 /* ---------- Section shell ---------- */
 section{padding:96px 0;}
@@ -240,7 +260,7 @@ section{padding:96px 0;}
 .section-head p{font-size:16.5px; color:var(--slate); line-height:1.65;}
 
 /* ---------- Capability cards ---------- */
-.cap-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:22px;}
+.cap-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:22px;}
 .cap-card{
   background:#fff; border:1px solid var(--line); border-radius:var(--radius);
   padding:30px 26px; transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
@@ -253,19 +273,12 @@ section{padding:96px 0;}
 }
 .cap-card.electrical .icon-box{background:rgba(200,119,46,0.12); color:var(--copper);}
 .cap-card.plumbing .icon-box{background:rgba(43,67,107,0.10); color:var(--navy);}
-.cap-card.smart .icon-box{background:rgba(43,183,166,0.12); color:var(--cyan);}
 .cap-card h3{font-size:19px; margin-bottom:10px; font-weight:600;}
 .cap-card p{font-size:14.5px; color:var(--slate); margin-bottom:18px; line-height:1.6;}
 .cap-tags{display:flex; flex-wrap:wrap; gap:8px;}
 .cap-tags span{
   font-size:12px; background:var(--paper-2); color:var(--navy); padding:5px 10px;
   border-radius:6px; font-weight:500;
-}
-.cap-card.smart .cap-tags span{background:rgba(43,183,166,0.1); color:#0F6E62;}
-.cap-badge{
-  position:absolute; top:18px; right:18px; font-family:'JetBrains Mono'; font-size:10px;
-  background:var(--cyan); color:#fff; padding:4px 9px; border-radius:5px; font-weight:600;
-  letter-spacing:0.04em;
 }
 
 /* ---------- Packages ---------- */
@@ -481,4 +494,24 @@ footer{background:var(--navy); color:rgba(247,244,236,0.7); padding:64px 0 0;}
   .form-row{grid-template-columns:1fr;}
   .stat-grid{grid-template-columns:1fr 1fr;}
   .footer-grid{grid-template-columns:1fr;}
+}
+@media (max-width: 480px){
+  .wrap{padding:0 18px;}
+  nav.main{padding:14px 18px;}
+  .logo{font-size:17px; gap:8px;}
+  .logo-mark{width:30px; height:30px;}
+  .logo .sub{font-size:8.5px;}
+  .eyebrow{font-size:11px; padding:6px 12px;}
+  .hero p.lead{font-size:16px;}
+  section{padding:48px 0;}
+  .section-head{margin-bottom:36px;}
+  .pkg-card, .cap-card, .testi-card{padding:24px 20px;}
+  .quote-form{padding:22px;}
+  .panel{padding:18px;}
+  .panel-foot .cell{padding:10px 6px;}
+  .panel-foot .cell .num{font-size:17px;}
+  .brand-track{gap:32px;}
+  .stat-card{padding:28px 22px;}
+  .stat-grid{gap:20px;}
+  .cta-band{padding:28px 20px;}
 }

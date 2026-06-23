@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react';
 
-const ROLES = ['Flat Owner', 'Contractor / Electrician', 'Builder / Interior Designer'];
+const ROLES = ['Builder / Developer', 'Contractor / MEP Team', 'Architect / Designer', 'Individual Flat Owner'];
 
 export function QuoteForm() {
   const [role, setRole] = useState(ROLES[0]);
@@ -20,8 +20,8 @@ export function QuoteForm() {
               Tell us what you're building.
             </h2>
             <p>
-              Share a few details and we'll come back with a clear material quote — no pushy
-              sales calls, just a straight answer.
+              Share your BOQ or project scope and we'll come back with a trade-rate quote — no
+              inflated pricing, no pushy sales calls.
             </p>
 
             <div style={{ marginTop: '30px' }}>
@@ -44,7 +44,7 @@ export function QuoteForm() {
                 </div>
                 <div>
                   <strong>Email</strong>
-                  <span>hello@voltwayhome.in</span>
+                  <span>hello@jpprosupply.in</span>
                 </div>
               </div>
               <div className="info-row">
@@ -91,22 +91,22 @@ export function QuoteForm() {
             </div>
             <div className="form-row">
               <div className="field">
-                <label>Flat Size / Project Scope</label>
-                <input type="text" placeholder="e.g. 3BHK, 1800 sqft" />
+                <label>Project Scope / Quantity</label>
+                <input type="text" placeholder="e.g. 40-flat tower, Phase 2" />
               </div>
               <div className="field">
-                <label>Locality</label>
+                <label>Site Locality</label>
                 <input type="text" placeholder="e.g. Sector 82, Gurgaon" />
               </div>
             </div>
             <div className="form-row">
               <div className="field full">
                 <label>What do you need?</label>
-                <textarea placeholder="e.g. Complete electrical + smart switches for new 3BHK, possession in June"></textarea>
+                <textarea placeholder="e.g. Complete electrical + plumbing BOQ for 3 towers, possession starts Q3"></textarea>
               </div>
             </div>
             <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
-              Send My Requirement
+              Send Requirement
             </button>
             <p className="form-note">We respond within 24 hours on business days — usually much faster.</p>
           </form>

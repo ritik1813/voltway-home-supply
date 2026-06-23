@@ -3,33 +3,33 @@ const POINTS = [
     iconBg: 'rgba(200,119,46,0.12)',
     iconColor: 'var(--copper)',
     path: 'M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11',
-    title: 'We quote what we can actually deliver.',
-    body: 'No padded promises. If a brand or item is out of stock or delayed at the dealer end, we tell you upfront before you commit.',
+    title: 'Quoted against your BOQ, not a catalogue.',
+    body: 'Pricing is matched to your actual material list and current trade rates — not marked-up listed prices.',
   },
   {
     iconBg: 'rgba(43,183,166,0.12)',
     iconColor: 'var(--cyan)',
     path: 'M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2',
-    title: 'Every order gets a GST invoice.',
-    body: 'For your own records, your builder, or your interior designer — no cash-only, no off-book pricing.',
+    title: 'One account across every phase.',
+    body: 'Builders running multi-tower or multi-phase projects get a single standing account instead of requoting each time.',
   },
   {
     iconBg: 'rgba(11,27,43,0.08)',
     iconColor: 'var(--navy)',
-    path: 'M3 3v18h18M7 14l4-4 3 3 5-6',
-    title: 'First few orders, founder-handled.',
-    body: "Right now, you'll speak directly with us — not a call centre. We're building this on getting early orders right.",
+    path: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z',
+    title: 'Sourced only from authorised distributors.',
+    body: 'Every order is pulled from our authorised dealer network for Havells, Polycab, Jaquar and other listed brands — never grey market.',
   },
 ];
 
-export function Testimonials() {
+export function HowWeOperate() {
   return (
-    <section id="testimonials">
+    <section id="how-we-operate">
       <div className="wrap">
         <div className="section-head center">
-          <span className="kicker">New business, straight terms</span>
-          <h2>We're starting out — here's exactly how we work.</h2>
-          <p>We'd rather tell you plainly than fake a track record. This is what you can expect, every time.</p>
+          <span className="kicker">How we operate</span>
+          <h2>What builders and contractors get, every order.</h2>
+          <p>No padded promises, no fixed catalogue pricing — just material quoted against your actual requirement.</p>
         </div>
         <div className="testi-grid">
           {POINTS.map((point) => (

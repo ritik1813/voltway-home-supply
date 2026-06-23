@@ -6,8 +6,8 @@ export function CtaBand() {
       <div className="wrap">
         <div className="cta-band">
           <div>
-            <h3>Moving into a new flat soon?</h3>
-            <p>Send us your floor plan or flat size on WhatsApp — get a material quote within 24 hours.</p>
+            <h3>Running a live site or planning your next phase?</h3>
+            <p>Send your BOQ or material list on WhatsApp — get a trade-rate quote within 24 hours.</p>
           </div>
           <div className="actions">
             <a href="https://wa.me/919999999999" className="btn btn-light">

@@ -8,11 +8,11 @@ export function Footer() {
           <div>
             <div className="footer-logo">
               <LogoMark size={32} bgFill="#142B45" />
-              Voltway
+              JP Pro Supply
             </div>
             <p style={{ fontSize: '14px', lineHeight: 1.7, maxWidth: '280px', color: 'rgba(247,244,236,0.6)' }}>
-              Electrical, plumbing &amp; smart home material supply for new flats, renovations
-              and project builds across Gurgaon &amp; NCR.
+              Bulk electrical &amp; plumbing material supply for builders, contractors and
+              project teams across Gurgaon &amp; NCR.
             </p>
             <div className="footer-social" style={{ marginTop: '20px' }}>
               <a href="#">
@@ -36,8 +36,8 @@ export function Footer() {
             <h5>Company</h5>
             <ul>
               <li><a href="#capabilities">What We Deal In</a></li>
-              <li><a href="#packages">Solutions</a></li>
-              <li><a href="#why">Why Voltway</a></li>
+              <li><a href="#packages">Bulk Solutions</a></li>
+              <li><a href="#why">Why Us</a></li>
               <li><a href="#faq">FAQ</a></li>
             </ul>
           </div>
@@ -46,22 +46,22 @@ export function Footer() {
             <ul>
               <li><a href="#capabilities">Electrical Supply</a></li>
               <li><a href="#capabilities">Plumbing Supply</a></li>
-              <li><a href="#capabilities">Smart Home &amp; Automation</a></li>
-              <li><a href="#packages">Builder Bulk Supply</a></li>
+              <li><a href="#packages">Bulk Project Supply</a></li>
+              <li><a href="#packages">Site Material Supply</a></li>
             </ul>
           </div>
           <div className="footer-col">
             <h5>Get in touch</h5>
             <ul>
               <li>+91 99999 99999</li>
-              <li>hello@voltwayhome.in</li>
+              <li>hello@jpprosupply.in</li>
               <li>Gurgaon &amp; NCR</li>
               <li>Mon–Sat, 9:30am–7:30pm</li>
             </ul>
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© 2026 Voltway Home Supply Co. All rights reserved.</span>
+          <span>© 2026 JP Pro Supply. All rights reserved.</span>
           <span>GSTIN: XXAAAAA0000A1Z5</span>
         </div>
       </div>

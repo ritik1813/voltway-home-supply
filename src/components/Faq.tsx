@@ -3,20 +3,20 @@ import { PlusIcon } from './icons';
 
 const FAQS = [
   {
-    q: 'Do you have a shop I can visit?',
-    a: 'We operate as a supply company without a retail walk-in shop — this keeps our prices competitive. We work entirely through WhatsApp, calls and site visits when needed for larger projects.',
+    q: 'Is there a minimum order size for trade pricing?',
+    a: "There's no fixed minimum, but trade rates apply from site or multi-unit orders — typically a flat's full electrical or plumbing BOQ and above. Share your scope and we'll confirm the rate that applies.",
   },
   {
-    q: "How is pricing decided if there's no listed catalogue?",
-    a: 'Material pricing changes often and depends on brand, quantity and current rates. We give you an accurate, itemised quote, usually within a day of understanding your requirement — no inflated catalogue prices.',
+    q: 'Can you supply across multiple towers or phases under one account?',
+    a: 'Yes — most builder accounts run as a single standing account across phases, with scheduled dispatch and one consolidated billing cycle instead of requoting for every order.',
   },
   {
-    q: 'Can you handle installation too?',
-    a: 'We focus on genuine material supply and coordinate closely with your electrician or plumber. For smart home devices, we also support setup and app configuration on handover.',
+    q: "How is pricing decided without a fixed catalogue?",
+    a: 'Trade rates move with brand, quantity and current market rates. We quote against your actual BOQ or material list, usually within a day.',
   },
   {
-    q: 'Do you supply outside Gurgaon?',
-    a: 'Our fastest delivery is across Gurgaon and NCR. For bulk project orders, we can also ship select items further — ask us when you reach out.',
+    q: 'Do you deliver outside Gurgaon?',
+    a: 'Our standard dispatch covers Gurgaon and NCR. For larger project orders we also ship select material further — confirm with us at the quoting stage.',
   },
 ];
 
