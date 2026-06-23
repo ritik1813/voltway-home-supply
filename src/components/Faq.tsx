@@ -3,8 +3,8 @@ import { PlusIcon } from './icons';
 
 const FAQS = [
   {
-    q: 'Is there a minimum order size for trade pricing?',
-    a: "There's no fixed minimum, but trade rates apply from site or multi-unit orders — typically a flat's full electrical or plumbing BOQ and above. Share your scope and we'll confirm the rate that applies.",
+    q: 'Is there a minimum order size?',
+    a: "No. We supply for a single flat as well as full projects — pricing is quoted against your actual material list either way.",
   },
   {
     q: 'Can you supply across multiple towers or phases under one account?',

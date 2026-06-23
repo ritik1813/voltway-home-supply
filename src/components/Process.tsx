@@ -1,8 +1,8 @@
 const STEPS = [
-  { num: '01', title: 'Share your BOQ or site list', desc: 'Send your bill of quantities, floor plan or material list over WhatsApp or the quote form — single site or full project.' },
-  { num: '02', title: 'Get a trade-rate quote', desc: 'We quote current trade rates against your list, brand-wise, with no inflated catalogue pricing.' },
-  { num: '03', title: 'We source & dispatch', desc: 'Material is pulled from our authorised dealer network and dispatched to your site across Gurgaon/NCR.' },
-  { num: '04', title: 'Reorder for the next phase', desc: 'Reorder against your existing account for the next tower or phase — no requoting from scratch.' },
+  { num: '01', title: 'Share your material list', desc: 'Send your BOQ, floor plan or material list over WhatsApp or the quote form — for one flat or a full project.' },
+  { num: '02', title: 'Get a quote', desc: 'We quote against your list at current rates, brand-wise, usually within a day.' },
+  { num: '03', title: 'We source and deliver', desc: 'Material is sourced from our authorised dealer network and delivered to your site or flat across Gurgaon and NCR.' },
+  { num: '04', title: 'Reorder anytime', desc: 'Need more later, for the next room, phase or tower — reorder against the same list.' },
 ];
 
 export function Process() {
@@ -11,7 +11,7 @@ export function Process() {
       <div className="wrap">
         <div className="section-head">
           <span className="kicker">How it works</span>
-          <h2>From BOQ to site dispatch, in four steps.</h2>
+          <h2>How an order works, start to finish.</h2>
         </div>
         <div className="process-wrap">
           <div className="process-line"></div>

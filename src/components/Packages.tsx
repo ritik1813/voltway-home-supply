@@ -2,25 +2,25 @@ import { ArrowRightIcon, CheckIcon } from './icons';
 
 const PACKAGES = [
   {
-    tag: 'BUILDERS & DEVELOPERS',
-    title: 'Bulk Project Supply',
-    desc: 'Standing or phase-wise material supply for ongoing flat construction — trade pricing, scheduled site dispatch, one account across every tower.',
-    items: ['Trade pricing on volume orders', 'Phase-wise / scheduled site delivery', 'Single consolidated account & billing cycle'],
-    featured: true,
+    tag: 'FLAT OWNERS & DESIGNERS',
+    title: 'Single Flat & Fit-Out Supply',
+    desc: 'Material and fittings for one flat or a design specification — the same sourcing and pricing approach we use for larger orders.',
+    items: ['Matched to your floor plan or spec', 'Brand and finish selection support', 'Same authorised sourcing as larger orders'],
+    featured: false,
   },
   {
     tag: 'CONTRACTORS & MEP TEAMS',
     title: 'Site Material Supply',
-    desc: 'Electrical and plumbing material matched to your BOQ for an active site — ordered once, delivered as work progresses.',
+    desc: 'Electrical, plumbing and automation material matched to your BOQ for an active site — ordered once, delivered as work progresses.',
     items: ['BOQ-matched material list', 'Mid-project top-up orders', 'Direct coordination with your site engineer'],
     featured: false,
   },
   {
-    tag: 'ARCHITECTS & DESIGNERS',
-    title: 'Spec & Fit-Out Supply',
-    desc: 'Switch, sanitaryware and fitting selections sourced to match your design specification, from a single unit to a full project.',
-    items: ['Brand & finish matching to spec', 'Sample/selection support before bulk order', 'Supply across single units to full projects'],
-    featured: false,
+    tag: 'BUILDERS & DEVELOPERS',
+    title: 'Bulk Project Supply',
+    desc: 'Standing or phase-wise material supply for ongoing flat construction — trade pricing, scheduled site dispatch, one account across every tower.',
+    items: ['Trade pricing on volume orders', 'Phase-wise or scheduled site delivery', 'One consolidated account & billing cycle'],
+    featured: true,
   },
 ];
 
@@ -29,11 +29,11 @@ export function Packages() {
     <section className="pkg-section" id="packages">
       <div className="wrap">
         <div className="section-head center">
-          <span className="kicker">Bulk supply structures</span>
-          <h2>Built for how bulk buyers actually order.</h2>
+          <span className="kicker">How we supply</span>
+          <h2>Pick what matches your project.</h2>
           <p>
-            Builders, contractors and design teams each order differently. Pick the structure
-            that matches how your project runs.
+            From a single flat's material list to ongoing multi-tower supply — quoted against
+            what you actually need.
           </p>
         </div>
 

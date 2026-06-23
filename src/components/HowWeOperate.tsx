@@ -3,8 +3,8 @@ const POINTS = [
     iconBg: 'rgba(200,119,46,0.12)',
     iconColor: 'var(--copper)',
     path: 'M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11',
-    title: 'Quoted against your BOQ, not a catalogue.',
-    body: 'Pricing is matched to your actual material list and current trade rates — not marked-up listed prices.',
+    title: 'Quoted against your material list, not a catalogue.',
+    body: 'Pricing is matched to your actual list and current rates, whatever the order size.',
   },
   {
     iconBg: 'rgba(43,183,166,0.12)',
@@ -28,7 +28,7 @@ export function HowWeOperate() {
       <div className="wrap">
         <div className="section-head center">
           <span className="kicker">How we operate</span>
-          <h2>What builders and contractors get, every order.</h2>
+          <h2>What you get with every order.</h2>
           <p>No padded promises, no fixed catalogue pricing — just material quoted against your actual requirement.</p>
         </div>
         <div className="testi-grid">

@@ -8,19 +8,19 @@ export function Hero() {
       <div className="hero-inner">
         <div className="hero-copy">
           <div className="eyebrow">
-            <span className="pulse"></span> AUTHORISED DEALER · BULK SUPPLY · GURGAON NCR
+            <span className="pulse"></span> ELECTRICAL · PLUMBING · HOME AUTOMATION — GURGAON NCR
           </div>
           <h1>
-            Builders lose time chasing three vendors for one flat.{' '}
-            <span className="accent">We supply electrical and plumbing material as one bulk order.</span>
+            We supply electrical, plumbing and home automation material across Gurgaon and NCR.{' '}
+            <span className="accent">For flat owners, contractors and builders alike.</span>
           </h1>
           <p className="lead">
-            JP Pro Supply sources electrical and plumbing material from authorised distributors
-            across Delhi NCR and delivers it straight to your project site — at trade pricing,
-            against your BOQ, on one consolidated account for every flat or phase you're building.
+            JP Pro Supply sources material from authorised distributors and supplies it against
+            your material list or BOQ, at current rates — whether it's for one flat or a full
+            project. We deliver to your site across Gurgaon and NCR.
           </p>
           <div className="hero-actions">
-            <a href="#quote" className="btn btn-primary">Get a Bulk Quote</a>
+            <a href="#quote" className="btn btn-primary">Get a Quote</a>
             <a href="https://wa.me/919999999999" className="btn btn-light">
               <WhatsAppIcon />
               Chat on WhatsApp
@@ -29,15 +29,15 @@ export function Hero() {
           <div className="hero-trust">
             <div className="item">
               <CircleCheckIcon />
-              Trade pricing on bulk &amp; project orders
+              Quoted against your material list or BOQ
             </div>
             <div className="item">
               <CircleCheckIcon />
-              BOQ-based quoting, not inflated catalogue rates
+              Sourced from authorised distributors, not grey market
             </div>
             <div className="item">
               <CircleCheckIcon />
-              Authorised dealer sourcing, not grey market
+              Based in Gurgaon, deliver across NCR
             </div>
           </div>
         </div>
@@ -52,28 +52,34 @@ export function Hero() {
             </div>
             <svg className="trace-svg" viewBox="0 0 420 230" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g fontFamily="JetBrains Mono" fontSize="10.5" fill="rgba(247,244,236,0.55)">
-                <text x="22" y="78">ELECTRICAL</text>
-                <text x="22" y="158">PLUMBING</text>
-                <text x="338" y="118" textAnchor="end">PROJECT SITE</text>
+                <text x="22" y="38">ELECTRICAL</text>
+                <text x="22" y="118">PLUMBING</text>
+                <text x="22" y="198">AUTOMATION</text>
+                <text x="338" y="118" textAnchor="end">YOUR SITE</text>
               </g>
-              <circle cx="60" cy="88" r="5" fill="#C8772E" />
-              <circle cx="60" cy="168" r="5" fill="#2BB7A6" />
+              <circle cx="60" cy="48" r="5" fill="#C8772E" />
+              <circle cx="60" cy="128" r="5" fill="#6FD9C9" />
+              <circle cx="60" cy="208" r="5" fill="#2BB7A6" />
               <circle cx="360" cy="128" r="7" fill="none" stroke="#fff" strokeWidth="1.5" />
               <circle cx="360" cy="128" r="3" fill="#fff" />
 
-              <path d="M60 88 C 180 88, 220 128, 360 128" stroke="#C8772E" strokeWidth="1.6" strokeDasharray="4 5" opacity="0.85" />
-              <path d="M60 168 C 180 168, 220 128, 360 128" stroke="#2BB7A6" strokeWidth="1.6" strokeDasharray="4 5" opacity="0.85" />
+              <path d="M60 48 C 180 48, 220 128, 360 128" stroke="#C8772E" strokeWidth="1.6" strokeDasharray="4 5" opacity="0.85" />
+              <path d="M60 128 L 360 128" stroke="#6FD9C9" strokeWidth="1.6" strokeDasharray="4 5" opacity="0.85" />
+              <path d="M60 208 C 180 208, 220 128, 360 128" stroke="#2BB7A6" strokeWidth="1.6" strokeDasharray="4 5" opacity="0.85" />
 
               <circle r="3" fill="#fff">
-                <animateMotion dur="3.2s" repeatCount="indefinite" path="M60 88 C 180 88, 220 128, 360 128" />
+                <animateMotion dur="3.2s" repeatCount="indefinite" path="M60 48 C 180 48, 220 128, 360 128" />
               </circle>
               <circle r="3" fill="#fff">
-                <animateMotion dur="2.8s" repeatCount="indefinite" path="M60 168 C 180 168, 220 128, 360 128" />
+                <animateMotion dur="2.6s" repeatCount="indefinite" path="M60 128 L 360 128" />
+              </circle>
+              <circle r="3" fill="#fff">
+                <animateMotion dur="3.6s" repeatCount="indefinite" path="M60 208 C 180 208, 220 128, 360 128" />
               </circle>
             </svg>
             <div className="panel-foot">
               <div className="cell">
-                <div className="num">2</div>
+                <div className="num">3</div>
                 <div className="lbl">Categories</div>
               </div>
               <div className="cell">

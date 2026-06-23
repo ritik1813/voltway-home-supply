@@ -260,7 +260,7 @@ section{padding:96px 0;}
 .section-head p{font-size:16.5px; color:var(--slate); line-height:1.65;}
 
 /* ---------- Capability cards ---------- */
-.cap-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:22px;}
+.cap-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:22px;}
 .cap-card{
   background:#fff; border:1px solid var(--line); border-radius:var(--radius);
   padding:30px 26px; transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
@@ -273,6 +273,7 @@ section{padding:96px 0;}
 }
 .cap-card.electrical .icon-box{background:rgba(200,119,46,0.12); color:var(--copper);}
 .cap-card.plumbing .icon-box{background:rgba(43,67,107,0.10); color:var(--navy);}
+.cap-card.smart .icon-box{background:rgba(43,183,166,0.12); color:var(--cyan);}
 .cap-card h3{font-size:19px; margin-bottom:10px; font-weight:600;}
 .cap-card p{font-size:14.5px; color:var(--slate); margin-bottom:18px; line-height:1.6;}
 .cap-tags{display:flex; flex-wrap:wrap; gap:8px;}
@@ -280,6 +281,7 @@ section{padding:96px 0;}
   font-size:12px; background:var(--paper-2); color:var(--navy); padding:5px 10px;
   border-radius:6px; font-weight:500;
 }
+.cap-card.smart .cap-tags span{background:rgba(43,183,166,0.1); color:#0F6E62;}
 
 /* ---------- Packages ---------- */
 .pkg-section{background:var(--navy); color:#fff; position:relative; overflow:hidden;}

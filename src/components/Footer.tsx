@@ -11,8 +11,8 @@ export function Footer() {
               JP Pro Supply
             </div>
             <p style={{ fontSize: '14px', lineHeight: 1.7, maxWidth: '280px', color: 'rgba(247,244,236,0.6)' }}>
-              Bulk electrical &amp; plumbing material supply for builders, contractors and
-              project teams across Gurgaon &amp; NCR.
+              Electrical, plumbing and home automation material supply for flat owners,
+              contractors and builders across Gurgaon &amp; NCR.
             </p>
             <div className="footer-social" style={{ marginTop: '20px' }}>
               <a href="#">
@@ -36,7 +36,7 @@ export function Footer() {
             <h5>Company</h5>
             <ul>
               <li><a href="#capabilities">What We Deal In</a></li>
-              <li><a href="#packages">Bulk Solutions</a></li>
+              <li><a href="#packages">Solutions</a></li>
               <li><a href="#why">Why Us</a></li>
               <li><a href="#faq">FAQ</a></li>
             </ul>
@@ -46,7 +46,7 @@ export function Footer() {
             <ul>
               <li><a href="#capabilities">Electrical Supply</a></li>
               <li><a href="#capabilities">Plumbing Supply</a></li>
-              <li><a href="#packages">Bulk Project Supply</a></li>
+              <li><a href="#capabilities">Home Automation Supply</a></li>
               <li><a href="#packages">Site Material Supply</a></li>
             </ul>
           </div>

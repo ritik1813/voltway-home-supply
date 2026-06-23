@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react';
 
-const ROLES = ['Builder / Developer', 'Contractor / MEP Team', 'Architect / Designer', 'Individual Flat Owner'];
+const ROLES = ['Flat Owner', 'Contractor / MEP Team', 'Builder / Developer', 'Architect / Designer'];
 
 export function QuoteForm() {
   const [role, setRole] = useState(ROLES[0]);
@@ -20,8 +20,8 @@ export function QuoteForm() {
               Tell us what you're building.
             </h2>
             <p>
-              Share your BOQ or project scope and we'll come back with a trade-rate quote — no
-              inflated pricing, no pushy sales calls.
+              Share your material list or project scope and we'll send back a quote at current
+              rates — no inflated pricing, no pushy sales calls.
             </p>
 
             <div style={{ marginTop: '30px' }}>
@@ -92,7 +92,7 @@ export function QuoteForm() {
             <div className="form-row">
               <div className="field">
                 <label>Project Scope / Quantity</label>
-                <input type="text" placeholder="e.g. 40-flat tower, Phase 2" />
+                <input type="text" placeholder="e.g. 3BHK flat, or 40-flat tower Phase 2" />
               </div>
               <div className="field">
                 <label>Site Locality</label>
@@ -102,7 +102,7 @@ export function QuoteForm() {
             <div className="form-row">
               <div className="field full">
                 <label>What do you need?</label>
-                <textarea placeholder="e.g. Complete electrical + plumbing BOQ for 3 towers, possession starts Q3"></textarea>
+                <textarea placeholder="e.g. Complete electrical + plumbing material for a 3BHK flat, or BOQ for 3 towers"></textarea>
               </div>
             </div>
             <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
