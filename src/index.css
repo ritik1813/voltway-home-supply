@@ -527,14 +527,14 @@ nav.main {
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-shrink: 0;
   white-space: nowrap;
   font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 17px;
+  font-weight: 600;
+  font-size: 14.5px;
   color: var(--navy);
-  opacity: 0.75;
+  opacity: 0.85;
   transition: opacity 0.2s ease;
 }
 
@@ -542,13 +542,12 @@ nav.main {
   opacity: 1;
 }
 
-.brand-logo .mark {
-  width: 8px;
-  height: 8px;
-  border-radius: 2px;
-  background: var(--copper);
+.brand-logo img {
+  height: 28px;
+  width: auto;
+  max-width: 96px;
+  object-fit: contain;
   flex-shrink: 0;
-  transform: rotate(45deg);
 }
 
 /* ---------- Sections ---------- */
