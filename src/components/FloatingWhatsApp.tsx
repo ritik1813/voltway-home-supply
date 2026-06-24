@@ -1,9 +1,69 @@
+import { useState, type FormEvent } from 'react';
+import { WhatsAppIcon } from './icons';
+
+const WHATSAPP_NUMBER = '919999999999';
+const GREETING = 'Hi! 👋 How can we help you today?';
+
 export function FloatingWhatsApp() {
+  const [open, setOpen] = useState(false);
+  const [message, setMessage] = useState('');
+
+  const handleSend = (event: FormEvent) => {
+    event.preventDefault();
+    const text = message.trim() || GREETING;
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
+    setMessage('');
+    setOpen(false);
+  };
+
   return (
-    <a href="https://wa.me/919999999999" className="float-wa" aria-label="WhatsApp">
-      <svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.31-1.39a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2" />
-      </svg>
-    </a>
+    <div className="wa-widget">
+      {open && (
+        <div className="wa-popup">
+          <div className="wa-popup-head">
+            <span className="wa-popup-avatar">
+              <WhatsAppIcon size={20} />
+            </span>
+            <div className="wa-popup-head-text">
+              <strong>JP Pro Supply</strong>
+              <span>Typically replies within an hour</span>
+            </div>
+            <button
+              type="button"
+              className="wa-popup-close"
+              aria-label="Close chat"
+              onClick={() => setOpen(false)}
+            >
+              ×
+            </button>
+          </div>
+          <div className="wa-popup-body">
+            <div className="wa-bubble">{GREETING}</div>
+          </div>
+          <form className="wa-popup-input" onSubmit={handleSend}>
+            <input
+              type="text"
+              placeholder="Type your question…"
+              value={message}
+              onChange={(event) => setMessage(event.target.value)}
+              autoFocus
+            />
+            <button type="submit" aria-label="Send on WhatsApp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      )}
+      <button
+        type="button"
+        className="float-wa"
+        aria-label="Open WhatsApp chat"
+        onClick={() => setOpen((value) => !value)}
+      >
+        <WhatsAppIcon size={27} />
+      </button>
+    </div>
   );
 }

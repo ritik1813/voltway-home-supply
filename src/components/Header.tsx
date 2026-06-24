@@ -33,9 +33,9 @@ export function Header() {
         </div>
         <div className="nav-cta">
           <a href="#quote" className="btn btn-ghost btn-sm">Get a Quote</a>
-          <a href="https://wa.me/919999999999" className="btn btn-primary btn-sm">
+          <a href="https://wa.me/919999999999" className="btn btn-primary btn-sm nav-wa-btn">
             <WhatsAppIcon />
-            WhatsApp Us
+            <span className="nav-wa-label">WhatsApp Us</span>
           </a>
         </div>
         <button

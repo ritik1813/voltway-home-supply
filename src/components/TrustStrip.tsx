@@ -4,6 +4,9 @@ const BRANDS = [
   { name: 'Legrand', logo: '/brands/legrand.svg' },
   { name: 'Jaquar', logo: '/brands/jaquar.png' },
   { name: 'Wipro', logo: '/brands/wipro.svg' },
+  { name: 'Finolex', logo: '/brands/finolex.svg' },
+  { name: 'Cera', logo: '/brands/cera.png' },
+  { name: 'Schneider Electric', logo: '/brands/schneider.svg' },
 ];
 
 function BrandRow() {
@@ -12,7 +15,6 @@ function BrandRow() {
       {BRANDS.map((brand) => (
         <span className="brand-logo" key={brand.name}>
           <img src={brand.logo} alt={brand.name} />
-          {brand.name}
         </span>
       ))}
     </>
@@ -22,13 +24,11 @@ function BrandRow() {
 export function TrustStrip() {
   return (
     <div className="trust-strip">
-      <div className="wrap">
-        <span className="label">Authorised dealer network for</span>
-        <div className="brand-marquee">
-          <div className="brand-track">
-            <BrandRow />
-            <BrandRow />
-          </div>
+      <span className="label wrap">Authorised dealer network for</span>
+      <div className="brand-marquee">
+        <div className="brand-track">
+          <BrandRow />
+          <BrandRow />
         </div>
       </div>
     </div>
