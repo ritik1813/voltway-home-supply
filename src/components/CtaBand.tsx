@@ -10,7 +10,7 @@ export function CtaBand() {
             <p>Send your material list or BOQ over WhatsApp. We will deliver a comprehensive, brand-wise trade quote within 24 hours.</p>
           </div>
           <div className="actions">
-            <a href="https://wa.me/919999999999" className="btn btn-light">
+            <a href="https://wa.me/917982827516" className="btn btn-light">
               <WhatsAppIcon />
               WhatsApp BOQ Now
             </a>

@@ -36,7 +36,7 @@ export function Hero() {
           </p>
           <div className="hero-actions">
             <a href="#quote" className="btn btn-primary">Request a BOQ Quote</a>
-            <a href="https://wa.me/919999999999" className="btn btn-light">
+            <a href="https://wa.me/917982827516" className="btn btn-light">
               <WhatsAppIcon />
               Chat on WhatsApp
             </a>

@@ -32,7 +32,7 @@ export function QuoteForm() {
                 </div>
                 <div>
                   <strong>Call or WhatsApp</strong>
-                  <span>+91 99999 99999</span>
+                  <span>+91 79828 27516</span>
                 </div>
               </div>
               <div className="info-row">

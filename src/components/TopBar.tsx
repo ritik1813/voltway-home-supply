@@ -3,8 +3,8 @@ export function TopBar() {
     <div className="topbar">
       <div className="wrap">
         <div className="left">
-          <a href="tel:+919999999999">
-            <span className="dot">●</span>+91 99999 99999
+          <a href="tel:+917982827516">
+            <span className="dot">●</span>+91 79828 27516
           </a>
           <a href="#quote">
             <span className="dot">●</span>Serving Gurgaon &amp; NCR
