@@ -1,5 +1,3 @@
-import { LogoMark } from './icons';
-
 export function Footer() {
   return (
     <footer>
@@ -7,8 +5,14 @@ export function Footer() {
         <div className="footer-grid">
           <div>
             <div className="footer-logo">
-              <LogoMark size={32} bgFill="#142B45" />
-              JP Pro Supply
+              <span className="footer-logo-chip">
+                <img src="/brands/jp-logo.png" alt="JP Pro Supply logo" />
+              </span>
+              <span className="brand-name brand-name-light">
+                <span className="bn-light">JP</span>{' '}
+                <span className="bn-orange">PRO</span>{' '}
+                <span className="bn-light">SUPPLY</span>
+              </span>
             </div>
             <p style={{ fontSize: '14px', lineHeight: 1.7, maxWidth: '280px', color: 'rgba(247,244,236,0.6)' }}>
               Electrical, plumbing and home automation material supply for flat owners,
@@ -19,7 +23,7 @@ export function Footer() {
             <h5>Company</h5>
             <ul>
               <li><a href="#capabilities">Specialisations</a></li>
-              <li><a href="#estimator">Material Estimator</a></li>
+              <li><a href="#process">How It Works</a></li>
               <li><a href="#packages">Solutions</a></li>
               <li><a href="#why">Why Us</a></li>
             </ul>

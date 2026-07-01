@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { LogoMark, WhatsAppIcon } from './icons';
+import { WhatsAppIcon } from './icons';
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,14 +18,20 @@ export function Header() {
     >
       <nav className="main">
         <a href="#top" className="logo">
-          <LogoMark />
-          <span>
-            JP Pro Supply<span className="sub">Electrical, Plumbing &amp; Automation Supply</span>
+          <img src="/brands/jp-logo.png" alt="JP Pro Supply logo" className="logo-img" />
+          <span className="brand-text">
+            <span className="brand-name">
+              <span className="bn-blue">JP</span>{' '}
+              <span className="bn-orange">PRO</span>{' '}
+              <span className="bn-blue">SUPPLY</span>
+            </span>
+            <span className="brand-cats">
+              ELECTRICAL <span className="sep">|</span> PLUMBING <span className="sep">|</span> HOME AUTOMATION
+            </span>
           </span>
         </a>
         <div className={`nav-links${menuOpen ? ' open' : ''}`}>
           <a href="#capabilities" onClick={() => setMenuOpen(false)}>Specialisations</a>
-          <a href="#estimator" onClick={() => setMenuOpen(false)}>Estimator</a>
           <a href="#packages" onClick={() => setMenuOpen(false)}>Solutions</a>
           <a href="#process" onClick={() => setMenuOpen(false)}>How It Works</a>
           <a href="#why" onClick={() => setMenuOpen(false)}>Why Us</a>
