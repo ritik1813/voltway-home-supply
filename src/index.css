@@ -2385,13 +2385,7 @@ footer {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: var(--navy);
-  color: var(--white);
-  font-weight: 600;
-  font-size: 17px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
 }
 
 .review-who strong {
