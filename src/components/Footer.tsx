@@ -22,18 +22,19 @@ export function Footer() {
           <div className="footer-col">
             <h5>Company</h5>
             <ul>
-              <li><a href="#capabilities">Specialisations</a></li>
+              <li><a href="#products">Products</a></li>
               <li><a href="#process">How It Works</a></li>
               <li><a href="#packages">Solutions</a></li>
+              <li><a href="#reviews">Reviews</a></li>
               <li><a href="#why">Why Us</a></li>
             </ul>
           </div>
           <div className="footer-col">
             <h5>Categories</h5>
             <ul>
-              <li><a href="#capabilities">Electrical Supply</a></li>
-              <li><a href="#capabilities">Plumbing Supply</a></li>
-              <li><a href="#capabilities">Home Automation Supply</a></li>
+              <li><a href="#products">Electrical Supply</a></li>
+              <li><a href="#products">Plumbing Supply</a></li>
+              <li><a href="#products">Home Automation Supply</a></li>
               <li><a href="#packages">Site Material Supply</a></li>
             </ul>
           </div>

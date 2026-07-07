@@ -1,13 +1,96 @@
-import { useState, type FormEvent } from 'react';
+import { useState, useEffect, type FormEvent } from 'react';
 
 const ROLES = ['Flat Owner', 'Contractor / MEP Team', 'Builder / Developer', 'Architect / Designer'];
 
-export function QuoteForm() {
+const CATEGORIES = [
+  { id: 'Electrical', label: 'Electrical Materials', icon: '⚡' },
+  { id: 'Plumbing', label: 'Plumbing Materials', icon: '🚰' },
+  { id: 'Home Automation', label: 'Home Automation', icon: '🤖' },
+];
+
+interface PrefillState {
+  role?: string;
+  categories?: string[];
+  ctaText?: string;
+  timestamp?: number;
+}
+
+export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
   const [role, setRole] = useState(ROLES[0]);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [submitBtnText, setSubmitBtnText] = useState('Send Requirement');
+  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+  const [filePreview, setFilePreview] = useState<string | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+
+  useEffect(() => {
+    if (prefill && prefill.timestamp) {
+      if (prefill.role) setRole(prefill.role);
+      if (prefill.categories) setSelectedCategories(prefill.categories);
+      if (prefill.ctaText) setSubmitBtnText(prefill.ctaText);
+    }
+  }, [prefill]);
+
+  const toggleCategory = (id: string) => {
+    setSelectedCategories((prev) =>
+      prev.includes(id) ? prev.filter((c) => c !== id) : [...prev, id]
+    );
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      const file = e.target.files[0];
+      setUploadedFile(file);
+      if (file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          setFilePreview(reader.result as string);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        setFilePreview(null);
+      }
+    }
+  };
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+      const file = e.dataTransfer.files[0];
+      setUploadedFile(file);
+      if (file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          setFilePreview(reader.result as string);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        setFilePreview(null);
+      }
+    }
+  };
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    alert('Thanks! This is a demo form — connect it to WhatsApp API, Google Sheets, or your CRM to start receiving real leads.');
+    const categoriesText = selectedCategories.length > 0 ? selectedCategories.join(', ') : 'None selected';
+    const fileText = uploadedFile ? `${uploadedFile.name} (${(uploadedFile.size / 1024).toFixed(1)} KB)` : 'No file attached';
+    alert(
+      `Form Submitted Successfully!\n\n` +
+      `• Role: ${role}\n` +
+      `• Categories Selected: ${categoriesText}\n` +
+      `• Attached File: ${fileText}\n\n` +
+      `This is a demo form. Connect it to your WhatsApp API, email server, or CRM to receive live customer leads.`
+    );
   };
 
   return (
@@ -16,7 +99,7 @@ export function QuoteForm() {
         <div className="quote-grid">
           <div className="quote-info">
             <span className="kicker">Procurement Request</span>
-            <h2 style={{ fontSize: 'clamp(26px,3vw,32px)', marginBottom: '14px' }}>
+            <h2 style={{ fontSize: 'clamp(30px,3.4vw,38px)', marginBottom: '14px' }}>
               Request a trade quotation.
             </h2>
             <p>
@@ -72,6 +155,7 @@ export function QuoteForm() {
                 <input type="tel" placeholder="+91" required />
               </div>
             </div>
+
             <div className="form-row">
               <div className="field full">
                 <label>I am a...</label>
@@ -88,6 +172,27 @@ export function QuoteForm() {
                 </div>
               </div>
             </div>
+
+            <div className="form-row">
+              <div className="field full">
+                <label>Materials Needed (Select all that apply)</label>
+                <div className="chip-select">
+                  {CATEGORIES.map((cat) => {
+                    const isActive = selectedCategories.includes(cat.id);
+                    return (
+                      <span
+                        key={cat.id}
+                        className={`chip chip-category${isActive ? ' active' : ''}`}
+                        onClick={() => toggleCategory(cat.id)}
+                      >
+                        <span className="chip-icon">{cat.icon}</span> {cat.label}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
             <div className="form-row">
               <div className="field">
                 <label>Project Scope / Quantity</label>
@@ -98,14 +203,89 @@ export function QuoteForm() {
                 <input type="text" placeholder="e.g. Sector 82, Gurgaon" />
               </div>
             </div>
+
             <div className="form-row">
               <div className="field full">
-                <label>What do you need?</label>
-                <textarea placeholder="e.g. Complete electrical + plumbing material for a 3BHK flat, or BOQ for 3 towers"></textarea>
+                <label>What do you need? (Write details here or upload list below)</label>
+                <textarea placeholder="e.g. Complete electrical + plumbing material list or descriptions..."></textarea>
               </div>
             </div>
+
+            <div className="form-row">
+              <div className="field full">
+                <label>Attach BOQ, Material List or Photo/Image of handwritten note</label>
+                <div
+                  className={`file-upload-zone ${isDragging ? 'dragover' : ''} ${uploadedFile ? 'has-file' : ''}`}
+                  onDragOver={handleDragOver}
+                  onDragLeave={handleDragLeave}
+                  onDrop={handleDrop}
+                >
+                  {!uploadedFile ? (
+                    <>
+                      <input
+                        type="file"
+                        id="file-upload"
+                        className="hidden-file-input"
+                        accept="image/*,application/pdf,.doc,.docx,.xls,.xlsx"
+                        onChange={handleFileChange}
+                      />
+                      <label htmlFor="file-upload" className="file-upload-label">
+                        <div className="upload-icon-container">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="17 8 12 3 7 8" />
+                            <line x1="12" y1="3" x2="12" y2="15" />
+                          </svg>
+                        </div>
+                        <span className="upload-main-text">Drag & drop your file/image here, or <span className="upload-link">browse</span></span>
+                        <span className="upload-sub-text">PDF, Excel, Word, or Photos of your list (Max 10MB)</span>
+                      </label>
+                    </>
+                  ) : (
+                    <div className="file-upload-preview">
+                      <div className="preview-info">
+                        <div className="preview-thumbnail">
+                          {filePreview ? (
+                            <img src={filePreview} alt="Uploaded preview" className="thumbnail-img" />
+                          ) : (
+                            <div className="document-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                                <line x1="16" y1="13" x2="8" y2="13" />
+                                <line x1="16" y1="17" x2="8" y2="17" />
+                                <polyline points="10 9 9 9 8 9" />
+                              </svg>
+                            </div>
+                          )}
+                        </div>
+                        <div className="preview-meta">
+                          <span className="preview-filename">{uploadedFile.name}</span>
+                          <span className="preview-filesize">{(uploadedFile.size / 1024).toFixed(1)} KB</span>
+                        </div>
+                      </div>
+                      <button
+                        type="button"
+                        className="btn-remove-file"
+                        onClick={() => {
+                          setUploadedFile(null);
+                          setFilePreview(null);
+                        }}
+                        aria-label="Remove uploaded file"
+                      >
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <line x1="18" y1="6" x2="6" y2="18" />
+                          <line x1="6" y1="6" x2="18" y2="18" />
+                        </svg>
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+
             <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
-              Send Requirement
+              {submitBtnText}
             </button>
             <p className="form-note">We respond within 24 hours on business days — usually much faster.</p>
           </form>

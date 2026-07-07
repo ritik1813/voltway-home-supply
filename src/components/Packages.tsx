@@ -24,7 +24,11 @@ const PACKAGES = [
   },
 ];
 
-export function Packages() {
+interface PackagesProps {
+  onSelectPackage?: (role: string, categories: string[], ctaText: string) => void;
+}
+
+export function Packages({ onSelectPackage }: PackagesProps) {
   return (
     <section className="pkg-section" id="packages">
       <div className="wrap">
@@ -56,7 +60,24 @@ export function Packages() {
                   </li>
                 ))}
               </ul>
-              <a href="#quote" className="pkg-cta">
+              <a
+                href="#quote"
+                className="pkg-cta"
+                onClick={() => {
+                  let role = 'Flat Owner';
+                  let cats = ['Electrical', 'Plumbing'];
+                  let ctaText = 'Get Flat Supply Quote';
+                  if (pkg.title.includes('Contractor')) {
+                    role = 'Contractor / MEP Team';
+                    ctaText = 'Get Contractor Quote';
+                  } else if (pkg.title.includes('Bulk')) {
+                    role = 'Builder / Developer';
+                    cats = ['Electrical', 'Plumbing', 'Home Automation'];
+                    ctaText = 'Get Bulk Partnership Quote';
+                  }
+                  onSelectPackage?.(role, cats, ctaText);
+                }}
+              >
                 Get this quote <ArrowRightIcon />
               </a>
             </div>

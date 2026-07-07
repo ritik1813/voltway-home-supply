@@ -1,68 +1,74 @@
-const WHY_ITEMS = [
-  {
-    title: '100% Certified Sourcing',
-    desc: 'Every length of wire, pipe, or smart module is pulled directly from authorised brand distributors. We enforce a strict zero grey-market policy.',
-    path: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z',
-  },
-  {
-    title: 'Transparent BOQ Matching',
-    desc: 'We verify and quote against your exact bill of quantities. Rates are locked prior to dispatch so there are never invoice surprises.',
-    path: 'M12 8v4l3 3M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
-  },
-  {
-    title: 'Single-Vendor Convenience',
-    desc: 'Consolidate electrical, plumbing, and home automation materials under one trade account to streamline your billing and logistics.',
-    path: 'M3 3v18h18M7 14l4-4 3 3 5-6',
-  },
-  {
-    title: 'Phase-Wise Account Standing',
-    desc: 'Reorder for upcoming construction phases or additional units instantly. Keep your site moving without repeating the quoting cycle.',
-    path: 'M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2',
-  },
-];
-
-const STATS = [
-  { n: 'Direct', l: 'Sourcing from authorised dealers' },
-  { n: '3', l: 'Electrical, plumbing & home automation' },
-  { n: 'Gurgaon', l: 'Based here, deliver across NCR' },
-  { n: 'Any size', l: 'From a single flat to a full project' },
-];
-
 export function WhyUs() {
   return (
     <section className="why-section" id="why">
       <div className="wrap">
-        <div className="why-grid">
-          <div>
-            <span className="kicker">Why JP Pro Supply</span>
-            <h2 style={{ fontSize: 'clamp(26px,3vw,34px)', marginBottom: '30px' }}>
-              A few reasons people order from us.
-            </h2>
-            <div className="why-list">
-              {WHY_ITEMS.map((item) => (
-                <div className="why-item" key={item.title}>
-                  <div className="ico">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d={item.path} />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4>{item.title}</h4>
-                    <p>{item.desc}</p>
-                  </div>
-                </div>
-              ))}
+        <div className="section-head center" style={{ maxWidth: '780px', marginBottom: '48px' }}>
+          <span className="kicker">Why JP Pro Supply</span>
+          <h2>A few reasons site owners &amp; builders partner with us.</h2>
+          <p>
+            We align our supply logistics with your execution schedule, ensuring authentic materials
+            reach your site at unbeatable commercial rates.
+          </p>
+        </div>
+
+        <div className="why-card-grid">
+          {/* Card 1: Best Market Rates */}
+          <div className="why-card">
+            <div className="ico-box orange">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+                <circle cx="7" cy="7" r="1.5" fill="currentColor" />
+              </svg>
             </div>
+            <h4>Best Market Rates</h4>
+            <p>Direct trade pricing that consistently beats retail quotes — compare us line-by-line, and rates are locked before dispatch.</p>
           </div>
-          <div className="stat-card">
-            <div className="stat-grid">
-              {STATS.map((stat) => (
-                <div className="stat" key={stat.n}>
-                  <div className="n">{stat.n}</div>
-                  <div className="l">{stat.l}</div>
-                </div>
-              ))}
+
+          {/* Card 2: 100% Genuine */}
+          <div className="why-card">
+            <div className="ico-box green">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="m9 11 2 2 4-4" />
+              </svg>
             </div>
+            <h4>100% Genuine Materials</h4>
+            <p>Only genuine, ISI-marked materials with intact brand warranty &amp; proper GST invoices. Strict zero grey-market policy.</p>
+          </div>
+
+          {/* Card 3: Site Delivery */}
+          <div className="why-card">
+            <div className="ico-box blue">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="1" y="3" width="15" height="13" rx="2" />
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                <circle cx="5.5" cy="18.5" r="2.5" />
+                <circle cx="18.5" cy="18.5" r="2.5" />
+              </svg>
+            </div>
+            <h4>On-Time Site Delivery</h4>
+            <p>Coordinated dispatch with your project phase schedule so your labour is never idle waiting for conduits or cables.</p>
+          </div>
+
+          {/* Card 4: 24 Hr Turnaround (Stat) */}
+          <div className="why-card stat-card-new">
+            <div className="stat-val">24 hr<span className="accent-dot">.</span></div>
+            <div className="stat-label">Quote Turnaround</div>
+            <p>Submit your architectural BOQ or hand-written list, and we'll deliver an itemised trade quote within 24 hours.</p>
+          </div>
+
+          {/* Card 5: 3-in-1 Integration (Stat) */}
+          <div className="why-card stat-card-new">
+            <div className="stat-val">3-in-1<span className="accent-dot">.</span></div>
+            <div className="stat-label">Unified Supply</div>
+            <p>Manage your entire site's Electrical, Plumbing, and Home Automation under a single trade account &amp; logistics channel.</p>
+          </div>
+
+          {/* Card 6: PAN India (Stat) */}
+          <div className="why-card stat-card-new">
+            <div className="stat-val">PAN India<span className="accent-dot">.</span></div>
+            <div className="stat-label">Shipping Coverage</div>
+            <p>Gurgaon-based with same-day local dispatch, shipping bulk material consignments safely to any site across India.</p>
           </div>
         </div>
       </div>
