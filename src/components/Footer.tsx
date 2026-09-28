@@ -41,8 +41,8 @@ export function Footer() {
           <div className="footer-col">
             <h5>Get in touch</h5>
             <ul>
-              <li>+91 79828 27516</li>
-              <li>hello@jpprosupply.in</li>
+              <li>+91 93107 65871</li>
+              <li>contact@jpprosupply.com</li>
               <li>Gurgaon &amp; NCR</li>
               <li>Mon–Sat, 9:30am–7:30pm</li>
             </ul>
@@ -50,7 +50,7 @@ export function Footer() {
         </div>
         <div className="footer-bottom">
           <span>© 2026 JP Pro Supply. All rights reserved.</span>
-          <span>GSTIN: XXAAAAA0000A1Z5</span>
+          <span>GSTIN: 06CJAPS4363K1ZX</span>
         </div>
       </div>
     </footer>

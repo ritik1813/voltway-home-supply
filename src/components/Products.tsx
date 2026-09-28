@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRightIcon, WhatsAppIcon } from './icons';
 
-const WA_NUMBER = '917982827516';
+const WA_NUMBER = '919310765871';
 
 type Category = {
   id: string;
