@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { WhatsAppIcon } from './icons';
 
-const WHATSAPP_NUMBER = '917982827516';
+const WHATSAPP_NUMBER = '919310765871';
 const GREETING = 'Hi! 👋 How can we help you today?';
 
 export function FloatingWhatsApp() {

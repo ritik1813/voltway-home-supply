@@ -115,7 +115,7 @@ export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
                 </div>
                 <div>
                   <strong>Call or WhatsApp</strong>
-                  <span>+91 79828 27516</span>
+                  <span>+91 93107 65871</span>
                 </div>
               </div>
               <div className="info-row">
@@ -126,7 +126,7 @@ export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
                 </div>
                 <div>
                   <strong>Email</strong>
-                  <span>hello@jpprosupply.in</span>
+                  <span>contact@jpprosupply.com</span>
                 </div>
               </div>
               <div className="info-row">
