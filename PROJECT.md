@@ -23,6 +23,7 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 - **Quote form** — role, category chips, free-text requirement, drag-and-drop file attach with image preview. Submit currently shows a demo `alert()` only; no backend.
 - **FAQ, Footer** — footer carries contact details and GSTIN.
 - **Floating WhatsApp widget** — bottom-right chat bubble with a mini pre-chat form that opens `wa.me` with the composed message.
+- **SEO layer (back-end only, added 2026-10-19)** — `index.html` carries canonical, Open Graph / Twitter tags, geo meta, a `noscript` business summary and JSON-LD (Organization, HardwareStore/LocalBusiness, WebSite, WebPage, FAQPage). `public/` adds `robots.txt`, `og-image.png` and `static/pages.css`. `scripts/build-pages.mjs` runs after `vite build` and pre-renders static HTML into `dist/`: 4 service pages, `/service-areas/` with 16 area pages, `/blog/` with markdown posts from `site/content/blog/`, plus `sitemap.xml` and `llms.txt`. **One-way linking rule:** these pages link to the main site; the React app never links to them (discovery is via sitemap and search).
 
 ## Fundamentals & Constraints
 - Static front-end only; no server, no database, no auth. Any lead capture must go through WhatsApp deep links or a future form backend.
@@ -34,7 +35,9 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 - `index.html` → `src/main.tsx` mounts `<App />` in React StrictMode and loads the single global stylesheet `src/index.css`.
 - `src/App.tsx` composes the page top-to-bottom as a flat list of section components and owns the only cross-section state: a `quotePrefill` object (role, categories, CTA text, timestamp). `Products` and `Packages` call back into `App`, which pushes the prefill into `QuoteForm` via props; `QuoteForm` applies it in an effect keyed on the timestamp.
 - `src/components/*.tsx` — one file per page section plus `icons.tsx` (inline SVG icon components). Content (category lists, packages, reviews, FAQs) lives as const arrays at the top of each component; there is no CMS or data layer.
-- `public/` — static assets served as-is: brand logos, category photos, review avatars, hero video, favicon.
+- `public/` — static assets served as-is: brand logos, category photos, review avatars, hero video, favicon, `robots.txt`, `og-image.png`, `static/pages.css` (stylesheet for the pre-rendered pages).
+- `site/data/business.mjs` — single source of business facts (name, phone, email, GSTIN, address, geo, hours, brands) for the generated pages and `llms.txt`. `site/data/services.mjs` and `site/data/areas.mjs` hold the service and area page content; `site/content/blog/*.md` are blog posts with frontmatter (`title`, `description`, `date`, `category`, `keywords`, `related`) and a `## Frequently asked questions` section that also feeds FAQPage schema. `site/templates/layout.mjs` is the shared HTML shell.
+- `scripts/build-pages.mjs` — generator (uses `marked`); `scripts/make-og-image.mjs` — one-off OG image renderer using the preinstalled Playwright Chromium.
 - External services: Google Fonts (Space Grotesk, Inter, JetBrains Mono), WhatsApp `wa.me` deep links. Nothing else.
 
 ## Tech Stack
@@ -53,7 +56,8 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 - Cross-section communication only through `App.tsx` callbacks + props; no context or store.
 - Global CSS with section-scoped class names (`.hero`, `.pkg-section`, `.quote-section`…) and shared utilities (`.wrap`, `.btn`, `.btn-primary`, `.kicker`, `.section-head`).
 - Icons are inline SVG components in `icons.tsx`; no icon library.
-- Scripts: `npm run dev` (local, port 5173), `npm run build` (tsc + vite build), `npm run lint`, `npm run preview`.
+- Scripts: `npm run dev` (local, port 5173), `npm run build` (tsc + vite build + `build-pages`), `npm run pages` (regenerate SEO pages into an existing `dist/`), `npm run og-image`, `npm run lint`, `npm run preview`.
+- Adding a blog post: drop a `.md` file in `site/content/blog/` with the frontmatter above; it is picked up on the next build and added to the blog index, sitemap and `llms.txt`. The pre-rendered pages are not served by `vite dev`; use `npm run build && npm run preview`.
 
 ## Plans / Roadmap
 - [x] Merge remote branch `claude/quirky-goodall-ekkrgd` into `main` so the repo matches production (done 2026-10-19).
@@ -62,7 +66,11 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 - [ ] Swap generic category stock photos for real shop / site photos.
 - [ ] Centralise contact details (phone, email, GSTIN) into one constants module so they are edited in one place.
 - [ ] Rewrite README.md (still the Vite template text).
-- [ ] _TBD_ — owner to add any planned sections or SEO / Google Business work.
+- [x] Technical SEO on the home page, pre-rendered service / area / blog pages, sitemap, robots, llms.txt (done 2026-10-19).
+- [ ] Add Google Business Profile URL (and any directory listings) to `business.sameAs` in `site/data/business.mjs` and to the Organization JSON-LD in `index.html`.
+- [ ] Submit `https://www.jpprosupply.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
+- [ ] Confirm the Sector 52 postal code (122003 assumed) and add a street address if the owner wants it public.
+- [ ] Keep adding blog posts (target 2 to 4 per month) and area pages for new NCR pockets.
 
 ## Key Decisions
 | Date | Decision | Why |
@@ -77,3 +85,7 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 | 2026-07-07 | Local avatar images for placeholder reviews | Avoid hot-linked stock avatars |
 | 2026-09-28 | Contact details changed to +91 93107 65871 / contact@jpprosupply.com, real GSTIN 06CJAPS4363K1ZX; GSTIN row added to quote form | Owner's current business details; deployed to production by promoting the branch preview on Vercel |
 | 2026-10-19 | Fast-forward `main` to that branch | `main` had fallen behind production; a push to `main` would have rolled the live site back |
+| 2026-10-19 | SEO pages are pre-rendered static HTML generated post-build, not React routes | Keeps the React app untouched, gives crawlers and AI engines full HTML without JS, no router or SSR dependency |
+| 2026-10-19 | Blog / service / area pages link to the main site but are never linked from it | Owner's instruction: no visible change to the main site; discovery through sitemap and search |
+| 2026-10-19 | FAQPage schema on the home page reuses the existing FAQ copy; no Review / AggregateRating schema | Reviews are placeholders; marking them up would risk a manual action |
+| 2026-10-19 | `vercel.json` with `trailingSlash: true` | Canonicals and sitemap use trailing-slash URLs for the directory-index pages |
