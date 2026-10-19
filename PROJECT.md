@@ -1,0 +1,79 @@
+# JP Pro Supply — Website
+
+> One-page, high-conversion marketing site for JP Pro Supply, an electrical, plumbing and home-automation material dealer serving Gurgaon and NCR.
+
+## Overview
+Single-page React site that sells JP Pro Supply's trade-supply service to three audiences: flat owners doing a renovation or fit-out, contractors / MEP teams running sites, and builders / developers buying phase-wise. Every section funnels the visitor to one of two actions: send a BOQ / material list over WhatsApp, or submit the on-page quote form. The repo folder is still named `voltway-home-supply` (the original brand before the 2026-06-23 rebrand); the Vercel project keeps that name too.
+
+Deployed on Vercel (project `voltway-home-supply`, linked via the git-ignored `.vercel/` folder). Source of truth is `origin/main` on GitHub (`ritik1813/voltway-home-supply`).
+
+## Soul & Vision
+A plain, genuine local-business page — not a startup landing page. Copy stays concrete and trade-oriented (BOQ, brand-wise quote, site delivery, authorised sourcing), aimed at beating Bhagirath-market dealers and local Google Business listings on trust and responsiveness. WhatsApp is the primary conversion channel; everything else supports it.
+
+## Main Features
+- **Top bar + sticky header** — phone, service area, hours, and a WhatsApp CTA always visible.
+- **Video hero** — looping `public/hero-supply.mp4` with dark overlay, headline, two CTAs (quote form / WhatsApp).
+- **Trust strip** — authorised-brand logos (Polycab, Havells, Finolex, Legrand, Schneider, Wipro, Jaquar, Cera).
+- **Stats bar** — headline numbers (customers / projects / brands). Figures are the owner's estimates, not verified.
+- **Products** — three expandable category cards (Electrical, Plumbing, Home Automation) with grouped item lists, brand lines, and per-category WhatsApp + "get quote" buttons that prefill the quote form.
+- **Packages** — three audience-specific supply models (flat owner, contractor, builder); selecting one prefills role + categories in the quote form.
+- **Process / Why Us / How We Operate** — static explainer sections.
+- **Reviews** — six placeholder testimonials with local avatars in `public/avatars/`.
+- **CTA band** — "WhatsApp your BOQ" strip.
+- **Quote form** — role, category chips, free-text requirement, drag-and-drop file attach with image preview. Submit currently shows a demo `alert()` only; no backend.
+- **FAQ, Footer** — footer carries contact details and GSTIN.
+- **Floating WhatsApp widget** — bottom-right chat bubble with a mini pre-chat form that opens `wa.me` with the composed message.
+
+## Fundamentals & Constraints
+- Static front-end only; no server, no database, no auth. Any lead capture must go through WhatsApp deep links or a future form backend.
+- Must look right on phones first — most traffic will come from Google / WhatsApp on mobile.
+- Hero video is ~12 MB; keep an eye on load time and consider a poster / compressed variant.
+- Contact details (phone, email, GSTIN) are hard-coded in several components; a change must be applied everywhere (see Key Decisions).
+
+## Architecture
+- `index.html` → `src/main.tsx` mounts `<App />` in React StrictMode and loads the single global stylesheet `src/index.css`.
+- `src/App.tsx` composes the page top-to-bottom as a flat list of section components and owns the only cross-section state: a `quotePrefill` object (role, categories, CTA text, timestamp). `Products` and `Packages` call back into `App`, which pushes the prefill into `QuoteForm` via props; `QuoteForm` applies it in an effect keyed on the timestamp.
+- `src/components/*.tsx` — one file per page section plus `icons.tsx` (inline SVG icon components). Content (category lists, packages, reviews, FAQs) lives as const arrays at the top of each component; there is no CMS or data layer.
+- `public/` — static assets served as-is: brand logos, category photos, review avatars, hero video, favicon.
+- External services: Google Fonts (Space Grotesk, Inter, JetBrains Mono), WhatsApp `wa.me` deep links. Nothing else.
+
+## Tech Stack
+| Layer | Choice | Why |
+|---|---|---|
+| UI | React 19 + TypeScript | Vite React-TS template; component-per-section keeps a one-pager manageable |
+| Build / dev | Vite 8 (`@vitejs/plugin-react`) | Fast HMR, zero-config static output in `dist/` |
+| Styling | Hand-written CSS in `src/index.css` (~2.5k lines) | No framework; class-based sections with CSS variables for brand colours |
+| Lint | ESLint 10 + typescript-eslint, react-hooks, react-refresh | Template defaults |
+| Hosting | Vercel | Static deploy from `main` |
+| Lead channel | WhatsApp deep links | Owner runs the business over WhatsApp |
+
+## Design Patterns & Conventions
+- One component per section, named for the section (`Hero`, `Packages`, `QuoteForm`…), exported as a named function.
+- Static content lives in `const` arrays at the top of the component that renders it.
+- Cross-section communication only through `App.tsx` callbacks + props; no context or store.
+- Global CSS with section-scoped class names (`.hero`, `.pkg-section`, `.quote-section`…) and shared utilities (`.wrap`, `.btn`, `.btn-primary`, `.kicker`, `.section-head`).
+- Icons are inline SVG components in `icons.tsx`; no icon library.
+- Scripts: `npm run dev` (local, port 5173), `npm run build` (tsc + vite build), `npm run lint`, `npm run preview`.
+
+## Plans / Roadmap
+- [x] Merge remote branch `claude/quirky-goodall-ekkrgd` into `main` so the repo matches production (done 2026-10-19).
+- [ ] Wire the quote form to a real backend (WhatsApp API, email, Google Sheets or a form service) instead of the demo alert.
+- [ ] Replace placeholder reviews and stats with real customer feedback and verified numbers.
+- [ ] Swap generic category stock photos for real shop / site photos.
+- [ ] Centralise contact details (phone, email, GSTIN) into one constants module so they are edited in one place.
+- [ ] Rewrite README.md (still the Vite template text).
+- [ ] _TBD_ — owner to add any planned sections or SEO / Google Business work.
+
+## Key Decisions
+| Date | Decision | Why |
+|---|---|---|
+| 2026-06-22 | Start from Vite React-TS template, static site on Vercel | Simple one-pager, no backend needed |
+| 2026-06-23 | Rebrand from Voltway Home Supply to JP Pro Supply; position as bulk B2B material dealer | Reflect the real business and its trade customers |
+| 2026-06-23 | Keep home automation as a third category; use plain, genuine-business copy | Owner feedback — avoid startup-style marketing tone |
+| 2026-06-23 | Add video hero; add then remove a material estimator | Estimator dropped same day as out of scope / distracting |
+| 2026-06-24 | Real brand logos in the trust strip | Credibility with contractors who know the brands |
+| 2026-06-30 | Single WhatsApp / phone number across the site (then +91 79828 27516) | One contact channel for all CTAs |
+| 2026-07-07 | Expandable product category cards + prefill flow into quote form; drop `Capabilities` section | Let visitors pick what they need and land on a half-filled form |
+| 2026-07-07 | Local avatar images for placeholder reviews | Avoid hot-linked stock avatars |
+| 2026-09-28 | Contact details changed to +91 93107 65871 / contact@jpprosupply.com, real GSTIN 06CJAPS4363K1ZX; GSTIN row added to quote form | Owner's current business details; deployed to production by promoting the branch preview on Vercel |
+| 2026-10-19 | Fast-forward `main` to that branch | `main` had fallen behind production; a push to `main` would have rolled the live site back |
