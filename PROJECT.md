@@ -20,10 +20,10 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 - **Process / Why Us / How We Operate** — static explainer sections.
 - **Reviews** — six placeholder testimonials with local avatars in `public/avatars/`.
 - **CTA band** — "WhatsApp your BOQ" strip.
-- **Quote form** — role, category chips, free-text requirement, drag-and-drop file attach with image preview. Submit currently shows a demo `alert()` only; no backend.
+- **Quote form** — role, category chips, free-text requirement, drag-and-drop file attach with image preview. Submit opens WhatsApp (`wa.me/919310765871`) in a new tab with the filled-in details as the message; files cannot be passed through `wa.me`, so the message asks the customer to attach it in the chat. No backend.
 - **FAQ, Footer** — footer carries contact details and GSTIN.
 - **Floating WhatsApp widget** — bottom-right chat bubble with a mini pre-chat form that opens `wa.me` with the composed message.
-- **SEO layer (back-end only, added 2026-10-19)** — `index.html` carries canonical, Open Graph / Twitter tags, geo meta, a `noscript` business summary and JSON-LD (Organization, HardwareStore/LocalBusiness, WebSite, WebPage, FAQPage). `public/` adds `robots.txt`, `og-image.png` and `static/pages.css`. `scripts/build-pages.mjs` runs after `vite build` and pre-renders static HTML into `dist/`: 4 service pages, `/service-areas/` with 16 area pages, `/blog/` with markdown posts from `site/content/blog/`, plus `sitemap.xml` and `llms.txt`. **One-way linking rule:** these pages link to the main site; the React app never links to them (discovery is via sitemap and search).
+- **SEO layer (back-end only, added 2026-10-19)** — `index.html` carries canonical, Open Graph / Twitter tags, geo meta, a `noscript` business summary and JSON-LD (Organization, HardwareStore/LocalBusiness, WebSite, WebPage, FAQPage). `public/` adds `robots.txt`, `og-image.png` and `static/pages.css`. `scripts/build-pages.mjs` runs after `vite build` and pre-renders static HTML into `dist/`: 4 service pages, `/service-areas/` with 16 area pages, `/blog/` with markdown posts from `site/content/blog/`, plus `sitemap.xml` and `llms.txt`. **Linking rule:** these pages link to the main site; the React app links to them only through the footer "Blog" link (added 2026-10-19 at the owner's request), nothing else in the UI.
 
 ## Fundamentals & Constraints
 - Static front-end only; no server, no database, no auth. Any lead capture must go through WhatsApp deep links or a future form backend.
@@ -61,7 +61,7 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 
 ## Plans / Roadmap
 - [x] Merge remote branch `claude/quirky-goodall-ekkrgd` into `main` so the repo matches production (done 2026-10-19).
-- [ ] Wire the quote form to a real backend (WhatsApp API, email, Google Sheets or a form service) instead of the demo alert.
+- [x] Quote form submits to WhatsApp with the form contents (done 2026-10-19). A stored-lead backend (email / Sheets) is still open if needed.
 - [ ] Replace placeholder reviews and stats with real customer feedback and verified numbers.
 - [ ] Swap generic category stock photos for real shop / site photos.
 - [ ] Centralise contact details (phone, email, GSTIN) into one constants module so they are edited in one place.
@@ -86,6 +86,7 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 | 2026-09-28 | Contact details changed to +91 93107 65871 / contact@jpprosupply.com, real GSTIN 06CJAPS4363K1ZX; GSTIN row added to quote form | Owner's current business details; deployed to production by promoting the branch preview on Vercel |
 | 2026-10-19 | Fast-forward `main` to that branch | `main` had fallen behind production; a push to `main` would have rolled the live site back |
 | 2026-10-19 | SEO pages are pre-rendered static HTML generated post-build, not React routes | Keeps the React app untouched, gives crawlers and AI engines full HTML without JS, no router or SSR dependency |
-| 2026-10-19 | Blog / service / area pages link to the main site but are never linked from it | Owner's instruction: no visible change to the main site; discovery through sitemap and search |
+| 2026-10-19 | Blog / service / area pages link to the main site; the main site links back only via a footer "Blog" link | Owner's instruction: keep the main UI unchanged apart from that one footer link |
+| 2026-10-19 | Quote form opens WhatsApp with the form contents instead of the demo alert | WhatsApp is the owner's working channel; no server needed |
 | 2026-10-19 | FAQPage schema on the home page reuses the existing FAQ copy; no Review / AggregateRating schema | Reviews are placeholders; marking them up would risk a manual action |
 | 2026-10-19 | `vercel.json` with `trailingSlash: true` | Canonicals and sitemap use trailing-slash URLs for the directory-index pages |

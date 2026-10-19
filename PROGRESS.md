@@ -125,3 +125,9 @@ Entry format:
 - **Files:** `PROJECT.md`
 - **Why:** Close out the SEO rollout and record the verified search-engine properties.
 - **Status:** done. Remaining owner items: create a Google Business Profile for Sector 52 and send the URL for `sameAs`; decide on wiring the quote form; keep publishing blog posts.
+
+## 2026-10-19 08:10 — Front-end tidy-ups and quote form to WhatsApp
+- **What:** Removed the hero eyebrow line ("GURGAON & NCR • ELECTRICAL • PLUMBING • HOME AUTOMATION"); removed the `// ` prefix the `.kicker::before` rule added to every section label; removed the coloured left strip (`::before`) on the three dark stat cards (24 hr, 3-in-1, PAN India) in Why Us; made the quote form fields controlled and changed submit to open WhatsApp with name, phone, role, materials, scope, locality, requirement and a note about any attached file; added a "Blog" link to the footer Company column.
+- **Files:** `src/components/Hero.tsx`, `src/components/QuoteForm.tsx`, `src/components/Footer.tsx`, `src/index.css`, `PROJECT.md`
+- **Why:** Owner requests after the SEO rollout.
+- **Status:** done — verified with a headless browser: eyebrow absent, no `::before` content on kickers or stat cards, footer link present, form submit opens `wa.me/919310765871` with the composed text and does nothing when required fields are empty. Pre-existing lint error in `QuoteForm.tsx` (`react-hooks/set-state-in-effect`, prefill effect) left as is.

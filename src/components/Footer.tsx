@@ -27,6 +27,7 @@ export function Footer() {
               <li><a href="#packages">Solutions</a></li>
               <li><a href="#reviews">Reviews</a></li>
               <li><a href="#why">Why Us</a></li>
+              <li><a href="/blog/">Blog</a></li>
             </ul>
           </div>
           <div className="footer-col">

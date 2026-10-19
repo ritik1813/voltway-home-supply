@@ -626,11 +626,6 @@ section {
   font-weight: 600;
 }
 
-.kicker::before {
-  content: '// ';
-  color: var(--cyan);
-}
-
 .section-head h2 {
   font-size: clamp(34px, 4.2vw, 48px);
   font-weight: 700;
@@ -1026,28 +1021,6 @@ section {
   color: var(--white);
   position: relative;
   overflow: hidden;
-}
-
-.why-card.stat-card-new::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--cyan);
-}
-
-.why-card.stat-card-new:nth-of-type(4)::before {
-  background: var(--cyan);
-}
-
-.why-card.stat-card-new:nth-of-type(5)::before {
-  background: var(--copper);
-}
-
-.why-card.stat-card-new:nth-of-type(6)::before {
-  background: var(--cyan-light);
 }
 
 .why-card.stat-card-new:hover {

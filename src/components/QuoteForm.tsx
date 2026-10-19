@@ -2,6 +2,8 @@ import { useState, useEffect, type FormEvent } from 'react';
 
 const ROLES = ['Flat Owner', 'Contractor / MEP Team', 'Builder / Developer', 'Architect / Designer'];
 
+const WHATSAPP_NUMBER = '919310765871';
+
 const CATEGORIES = [
   { id: 'Electrical', label: 'Electrical Materials', icon: '⚡' },
   { id: 'Plumbing', label: 'Plumbing Materials', icon: '🚰' },
@@ -22,6 +24,11 @@ export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
   const [filePreview, setFilePreview] = useState<string | null>(null);
   const [isDragging, setIsDragging] = useState(false);
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [scope, setScope] = useState('');
+  const [locality, setLocality] = useState('');
+  const [details, setDetails] = useState('');
 
   useEffect(() => {
     if (prefill && prefill.timestamp) {
@@ -82,15 +89,22 @@ export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const categoriesText = selectedCategories.length > 0 ? selectedCategories.join(', ') : 'None selected';
-    const fileText = uploadedFile ? `${uploadedFile.name} (${(uploadedFile.size / 1024).toFixed(1)} KB)` : 'No file attached';
-    alert(
-      `Form Submitted Successfully!\n\n` +
-      `• Role: ${role}\n` +
-      `• Categories Selected: ${categoriesText}\n` +
-      `• Attached File: ${fileText}\n\n` +
-      `This is a demo form. Connect it to your WhatsApp API, email server, or CRM to receive live customer leads.`
-    );
+    const lines = [
+      'Hi JP Pro Supply, I would like a quote.',
+      '',
+      `Name: ${name.trim()}`,
+      `Phone: ${phone.trim()}`,
+      `I am a: ${role}`,
+      `Materials: ${selectedCategories.length > 0 ? selectedCategories.join(', ') : 'Not specified'}`,
+      scope.trim() ? `Project scope: ${scope.trim()}` : null,
+      locality.trim() ? `Site locality: ${locality.trim()}` : null,
+      details.trim() ? `Requirement: ${details.trim()}` : null,
+      uploadedFile ? `I have a file to share (${uploadedFile.name}); I will attach it here in the chat.` : null,
+      '',
+      'Sent from jpprosupply.com',
+    ].filter((line): line is string => line !== null);
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
+    window.open(url, '_blank', 'noopener');
   };
 
   return (
@@ -160,11 +174,11 @@ export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
             <div className="form-row">
               <div className="field">
                 <label>Full Name</label>
-                <input type="text" placeholder="Your name" required />
+                <input type="text" placeholder="Your name" required value={name} onChange={(e) => setName(e.target.value)} />
               </div>
               <div className="field">
                 <label>Phone Number</label>
-                <input type="tel" placeholder="+91" required />
+                <input type="tel" placeholder="+91" required value={phone} onChange={(e) => setPhone(e.target.value)} />
               </div>
             </div>
 
@@ -208,18 +222,18 @@ export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
             <div className="form-row">
               <div className="field">
                 <label>Project Scope / Quantity</label>
-                <input type="text" placeholder="e.g. 3BHK flat, or 40-flat tower Phase 2" />
+                <input type="text" placeholder="e.g. 3BHK flat, or 40-flat tower Phase 2" value={scope} onChange={(e) => setScope(e.target.value)} />
               </div>
               <div className="field">
                 <label>Site Locality</label>
-                <input type="text" placeholder="e.g. Sector 82, Gurgaon" />
+                <input type="text" placeholder="e.g. Sector 82, Gurgaon" value={locality} onChange={(e) => setLocality(e.target.value)} />
               </div>
             </div>
 
             <div className="form-row">
               <div className="field full">
                 <label>What do you need? (Write details here or upload list below)</label>
-                <textarea placeholder="e.g. Complete electrical + plumbing material list or descriptions..."></textarea>
+                <textarea placeholder="e.g. Complete electrical + plumbing material list or descriptions..." value={details} onChange={(e) => setDetails(e.target.value)}></textarea>
               </div>
             </div>
 
@@ -299,7 +313,7 @@ export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
             <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
               {submitBtnText}
             </button>
-            <p className="form-note">We respond within 24 hours on business days — usually much faster.</p>
+            <p className="form-note">Clicking send opens WhatsApp with your details filled in. We respond within 24 hours on business days — usually much faster.</p>
           </form>
         </div>
       </div>

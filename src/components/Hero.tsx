@@ -24,9 +24,6 @@ export function Hero() {
       <div className="hero-video-overlay"></div>
       <div className="hero-inner hero-inner--video">
         <div className="hero-copy">
-          <div className="eyebrow">
-            <span className="pulse"></span> GURGAON &amp; NCR • ELECTRICAL • PLUMBING • HOME AUTOMATION
-          </div>
           <h1>
             Supplying Electrical, Plumbing &amp; Home Automation Materials{' '}
             <span className="accent">Across Gurgaon &amp; NCR.</span>
