@@ -68,7 +68,7 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 - [ ] Rewrite README.md (still the Vite template text).
 - [x] Technical SEO on the home page, pre-rendered service / area / blog pages, sitemap, robots, llms.txt (done 2026-10-19).
 - [ ] Add Google Business Profile URL (and any directory listings) to `business.sameAs` in `site/data/business.mjs` and to the Organization JSON-LD in `index.html`.
-- [ ] Submit `https://www.jpprosupply.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
+- [x] Google Search Console property `https://www.jpprosupply.com/` verified by HTML file and `sitemap.xml` submitted; Bing Webmaster Tools set up (owner, 2026-10-19).
 - [x] Postal code 122003 confirmed by owner (2026-10-19). No Google Business Profile exists yet; create one, then add its URL to `sameAs`.
 - [ ] Keep adding blog posts (target 2 to 4 per month) and area pages for new NCR pockets.
 

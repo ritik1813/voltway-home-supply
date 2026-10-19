@@ -119,3 +119,9 @@ Entry format:
 - **Files:** `index.html`, `package.json`, `package-lock.json`, `eslint.config.js`, `vercel.json`, `public/robots.txt`, `public/og-image.png`, `public/static/pages.css`, `scripts/build-pages.mjs`, `scripts/make-og-image.mjs`, `site/data/{business,services,areas}.mjs`, `site/templates/layout.mjs`, `site/content/blog/*.md` (9), `PROJECT.md`
 - **Why:** Owner wants organic and AI-search leads across all of Gurgaon and NCR without touching the front end; the live site was a single client-rendered URL with no canonical, OG, sitemap, robots or structured data.
 - **Status:** done — `npm run build` produces 32 pages, 0 broken internal links, all JSON-LD parses, 107 FAQ Q&As in schema. Pre-existing lint error in `QuoteForm.tsx` (`react-hooks/set-state-in-effect`) untouched. Pending owner: Google Business Profile URL for `sameAs`, Search Console sitemap submission, postal code confirmation.
+
+## 2026-10-19 07:30 — Live: merged to main, Search Console and Bing verified
+- **What:** Fast-forwarded `main` to the SEO branch (532ea8a → 6d9759f); Vercel production deploy succeeded at 06:56 UTC. Owner verified `https://www.jpprosupply.com/` in Google Search Console with the HTML file (`public/google45e0cd6a5abab51b.html`, must stay in place), submitted `sitemap.xml`, and set up Bing Webmaster Tools. A first attempt failed because the property had been created as `https://www.jpprosupply.com/sitemap.xml/`; it was re-created with the site root.
+- **Files:** `PROJECT.md`
+- **Why:** Close out the SEO rollout and record the verified search-engine properties.
+- **Status:** done. Remaining owner items: create a Google Business Profile for Sector 52 and send the URL for `sameAs`; decide on wiring the quote form; keep publishing blog posts.
