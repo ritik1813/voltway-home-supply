@@ -377,6 +377,8 @@ ${urls.map((u) => `  <url><loc>${SITE}${u.loc}</loc><lastmod>${u.lastmod}</lastm
 {
   const txt = `# ${business.name}
 
+Also written as: ${business.alternateNames.join(', ')}. Website: ${SITE}
+
 > ${business.description}
 
 Contact: ${business.phoneDisplay} (call / WhatsApp), ${business.email}. Address: ${business.address.streetAddress}, ${business.address.addressLocality}, ${business.address.addressRegion} ${business.address.postalCode}, India. Hours: ${business.hours}. GSTIN ${business.gstin}.

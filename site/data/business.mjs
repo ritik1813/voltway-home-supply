@@ -3,6 +3,7 @@
 export const business = {
   name: 'JP Pro Supply',
   legalName: 'JP Pro Supply',
+  alternateNames: ['jpprosupply', 'JPProSupply', 'JP Pro Supply Gurgaon'],
   siteUrl: 'https://www.jpprosupply.com',
   logo: 'https://www.jpprosupply.com/brands/jp-logo.png',
   ogImage: 'https://www.jpprosupply.com/og-image.png',
