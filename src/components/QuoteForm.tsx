@@ -1,4 +1,4 @@
-import { useState, useEffect, type FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 
 const ROLES = ['Flat Owner', 'Contractor / MEP Team', 'Builder / Developer', 'Architect / Designer'];
 
@@ -30,13 +30,14 @@ export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
   const [locality, setLocality] = useState('');
   const [details, setDetails] = useState('');
 
-  useEffect(() => {
-    if (prefill && prefill.timestamp) {
-      if (prefill.role) setRole(prefill.role);
-      if (prefill.categories) setSelectedCategories(prefill.categories);
-      if (prefill.ctaText) setSubmitBtnText(prefill.ctaText);
-    }
-  }, [prefill]);
+  // Apply a new prefill (from Products / Packages) during render, keyed on its timestamp.
+  const [appliedPrefill, setAppliedPrefill] = useState<number | undefined>(undefined);
+  if (prefill?.timestamp && prefill.timestamp !== appliedPrefill) {
+    setAppliedPrefill(prefill.timestamp);
+    if (prefill.role) setRole(prefill.role);
+    if (prefill.categories) setSelectedCategories(prefill.categories);
+    if (prefill.ctaText) setSubmitBtnText(prefill.ctaText);
+  }
 
   const toggleCategory = (id: string) => {
     setSelectedCategories((prev) =>

@@ -104,6 +104,19 @@ function webPageLd(pathname, name, description, extra = {}) {
   };
 }
 
+// ---------- Pre-render the home page ----------
+// `vite build --ssr src/entry-server.tsx --outDir dist-ssr` runs before this script and
+// emits dist-ssr/entry-server.js. Render <App/> to HTML and place it inside #root so the
+// first paint needs no JavaScript; main.tsx hydrates on top of it.
+{
+  const { render } = await import(path.join(root, 'dist-ssr/entry-server.js'));
+  const indexFile = path.join(dist, 'index.html');
+  const html = fs.readFileSync(indexFile, 'utf8');
+  const shell = '<div id="root"></div>';
+  if (!html.includes(shell)) throw new Error('dist/index.html: #root placeholder not found');
+  fs.writeFileSync(indexFile, html.replace(shell, `<div id="root">${render()}</div>`));
+}
+
 // ---------- Blog ----------
 const posts = fs.readdirSync(blogDir).filter((f) => f.endsWith('.md')).map((file) => {
   const raw = fs.readFileSync(path.join(blogDir, file), 'utf8');

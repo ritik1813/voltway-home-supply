@@ -12,7 +12,7 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 
 ## Main Features
 - **Top bar + sticky header** — phone, service area, hours, and a WhatsApp CTA always visible.
-- **Video hero** — looping `public/hero-supply.mp4` with dark overlay, headline, two CTAs (quote form / WhatsApp).
+- **Video hero** — `public/hero-poster*.jpg` (640 / 1024 / 1280 px, responsive `<img>`) paints first; on screens wider than 900 px that are not on data-saver, 2G/3G or reduced-motion, `public/hero-supply.mp4` (1280 px, 1.7 MB, no audio) is attached after the `load` event and plays over the poster. Phones get the still image only. Headline and two CTAs (quote form / WhatsApp).
 - **Trust strip** — authorised-brand logos (Polycab, Havells, Finolex, Legrand, Schneider, Wipro, Jaquar, Cera).
 - **Stats bar** — headline numbers (customers / projects / brands). Figures are the owner's estimates, not verified.
 - **Products** — three expandable category cards (Electrical, Plumbing, Home Automation) with grouped item lists, brand lines, and per-category WhatsApp + "get quote" buttons that prefill the quote form.
@@ -23,22 +23,22 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 - **Quote form** — role, category chips, free-text requirement, drag-and-drop file attach with image preview. Submit opens WhatsApp (`wa.me/919310765871`) in a new tab with the filled-in details as the message; files cannot be passed through `wa.me`, so the message asks the customer to attach it in the chat. No backend.
 - **FAQ, Footer** — footer carries contact details and GSTIN.
 - **Floating WhatsApp widget** — bottom-right chat bubble with a mini pre-chat form that opens `wa.me` with the composed message.
-- **SEO layer (back-end only, added 2026-10-19)** — `index.html` carries canonical, Open Graph / Twitter tags, geo meta, a `noscript` business summary and JSON-LD (Organization, HardwareStore/LocalBusiness, WebSite, WebPage, FAQPage). `public/` adds `robots.txt`, `og-image.png` and `static/pages.css`. `scripts/build-pages.mjs` runs after `vite build` and pre-renders static HTML into `dist/`: 4 service pages, `/service-areas/` with 16 area pages, `/blog/` with markdown posts from `site/content/blog/`, plus `sitemap.xml` and `llms.txt`. **Linking rule:** these pages link to the main site; the React app links to them only through the footer "Blog" link (added 2026-10-19 at the owner's request), nothing else in the UI.
+- **SEO layer (back-end only, added 2026-10-19)** — `index.html` carries canonical, Open Graph / Twitter tags, geo meta, preloads and JSON-LD (Organization, HardwareStore/LocalBusiness, WebSite, WebPage, FAQPage). `public/` adds `robots.txt`, `og-image.png` and `static/pages.css`. `scripts/build-pages.mjs` runs after `vite build` and pre-renders static HTML into `dist/`: 4 service pages, `/service-areas/` with 16 area pages, `/blog/` with markdown posts from `site/content/blog/`, plus `sitemap.xml` and `llms.txt`. **Linking rule:** these pages link to the main site; the React app links to them only through the footer "Blog" link (added 2026-10-19 at the owner's request), nothing else in the UI.
 
 ## Fundamentals & Constraints
 - Static front-end only; no server, no database, no auth. Any lead capture must go through WhatsApp deep links or a future form backend.
 - Must look right on phones first — most traffic will come from Google / WhatsApp on mobile.
-- Hero video is ~12 MB; keep an eye on load time and consider a poster / compressed variant.
+- Performance budget (Lighthouse mobile, 2026-10-20): score 96–98, FCP ≈ 1.6 s, LCP ≈ 2.0–2.7 s, Speed Index ≈ 1.6 s, CLS 0. Keep the hero poster small, keep fonts self-hosted, and keep images sized to their display size (avatars 128 px, logo 256 px tall).
 - Contact details (phone, email, GSTIN) are hard-coded in several components; a change must be applied everywhere (see Key Decisions).
 
 ## Architecture
-- `index.html` → `src/main.tsx` mounts `<App />` in React StrictMode and loads the single global stylesheet `src/index.css`.
+- `index.html` → `src/main.tsx` hydrates `<App />` (React StrictMode) onto the pre-rendered markup in `#root`, or mounts fresh in `vite dev` where the root is empty; it loads the single global stylesheet `src/index.css`. `src/entry-server.tsx` exports `render()` (react-dom/server `renderToString`); `vite build --ssr` compiles it to `dist-ssr/entry-server.js`, which `scripts/build-pages.mjs` runs to inject the home page HTML into `dist/index.html`. Components must stay SSR-safe: browser APIs only inside effects and handlers.
 - `src/App.tsx` composes the page top-to-bottom as a flat list of section components and owns the only cross-section state: a `quotePrefill` object (role, categories, CTA text, timestamp). `Products` and `Packages` call back into `App`, which pushes the prefill into `QuoteForm` via props; `QuoteForm` applies it in an effect keyed on the timestamp.
 - `src/components/*.tsx` — one file per page section plus `icons.tsx` (inline SVG icon components). Content (category lists, packages, reviews, FAQs) lives as const arrays at the top of each component; there is no CMS or data layer.
 - `public/` — static assets served as-is: brand logos, category photos, review avatars, hero video, favicon, `robots.txt`, `og-image.png`, `static/pages.css` (stylesheet for the pre-rendered pages).
 - `site/data/business.mjs` — single source of business facts (name, phone, email, GSTIN, address, geo, hours, brands) for the generated pages and `llms.txt`. `site/data/services.mjs` and `site/data/areas.mjs` hold the service and area page content; `site/content/blog/*.md` are blog posts with frontmatter (`title`, `description`, `date`, `category`, `keywords`, `related`) and a `## Frequently asked questions` section that also feeds FAQPage schema. `site/templates/layout.mjs` is the shared HTML shell.
 - `scripts/build-pages.mjs` — generator (uses `marked`); `scripts/make-og-image.mjs` — one-off OG image renderer using the preinstalled Playwright Chromium.
-- External services: Google Fonts (Space Grotesk, Inter, JetBrains Mono), WhatsApp `wa.me` deep links. Nothing else.
+- External services: WhatsApp `wa.me` deep links only. Fonts are self-hosted (`public/fonts/*.woff2`, latin subset, variable weight; `@font-face` at the top of `src/index.css` and `public/static/pages.css`).
 
 ## Tech Stack
 | Layer | Choice | Why |
@@ -56,7 +56,7 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 - Cross-section communication only through `App.tsx` callbacks + props; no context or store.
 - Global CSS with section-scoped class names (`.hero`, `.pkg-section`, `.quote-section`…) and shared utilities (`.wrap`, `.btn`, `.btn-primary`, `.kicker`, `.section-head`).
 - Icons are inline SVG components in `icons.tsx`; no icon library.
-- Scripts: `npm run dev` (local, port 5173), `npm run build` (tsc + vite build + `build-pages`), `npm run pages` (regenerate SEO pages into an existing `dist/`), `npm run og-image`, `npm run lint`, `npm run preview`.
+- Scripts: `npm run dev` (local, port 5173), `npm run build` (tsc + vite build + vite SSR build + `build-pages`), `npm run pages` (regenerate SEO pages into an existing `dist/`), `npm run og-image`, `npm run lint`, `npm run preview`.
 - Adding a blog post: drop a `.md` file in `site/content/blog/` with the frontmatter above; it is picked up on the next build and added to the blog index, sitemap and `llms.txt`. The pre-rendered pages are not served by `vite dev`; use `npm run build && npm run preview`.
 
 ## Plans / Roadmap
@@ -90,3 +90,7 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 | 2026-10-19 | Quote form opens WhatsApp with the form contents instead of the demo alert | WhatsApp is the owner's working channel; no server needed |
 | 2026-10-19 | FAQPage schema on the home page reuses the existing FAQ copy; no Review / AggregateRating schema | Reviews are placeholders; marking them up would risk a manual action |
 | 2026-10-19 | `vercel.json` with `trailingSlash: true` | Canonicals and sitemap use trailing-slash URLs for the directory-index pages |
+| 2026-10-20 | Pre-render the home page at build time (`vite build --ssr` + inject into `dist/index.html`) and hydrate | First paint without waiting for JS; crawlers and AI engines get full HTML. Replaced the `noscript` summary |
+| 2026-10-20 | Hero: responsive poster `<img>` first, video attached after `load` on desktop only; no video on phones, data-saver, slow connections or reduced motion | Chrome counts an autoplaying video's first frame as LCP, which pushed mobile LCP to 5 s |
+| 2026-10-20 | Self-host fonts (latin woff2) instead of Google Fonts | The Google Fonts stylesheet was render-blocking for ~0.9 s on mobile; also removes a third-party dependency |
+| 2026-10-20 | Hero video re-encoded 1920p/12.4 MB → 1280p/1.7 MB, audio track dropped; avatars 1024 px PNG → 128 px JPEG; logo and brand PNGs resized | Page weight 17 MB → 3.6 MB with no visible change under the hero overlay |
