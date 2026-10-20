@@ -18,7 +18,7 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 - **Products** — three expandable category cards (Electrical, Plumbing, Home Automation) with grouped item lists, brand lines, and per-category WhatsApp + "get quote" buttons that prefill the quote form.
 - **Packages** — three audience-specific supply models (flat owner, contractor, builder); selecting one prefills role + categories in the quote form.
 - **Process / Why Us / How We Operate** — static explainer sections.
-- **Reviews** — six placeholder testimonials with local avatars in `public/avatars/`.
+- **Reviews** — six placeholder testimonials in a Hinglish / Hindi / English mix; three carry photos from `public/avatars/`, three show an initials badge. Still placeholders: replace with real customer feedback and never add Review / AggregateRating schema until they are real.
 - **CTA band** — "WhatsApp your BOQ" strip.
 - **Quote form** — role, category chips, free-text requirement, drag-and-drop file attach with image preview. Submit opens WhatsApp (`wa.me/919310765871`) in a new tab with the filled-in details as the message; files cannot be passed through `wa.me`, so the message asks the customer to attach it in the chat. No backend.
 - **FAQ, Footer** — footer carries contact details and GSTIN.
@@ -67,7 +67,8 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 - [ ] Centralise contact details (phone, email, GSTIN) into one constants module so they are edited in one place.
 - [ ] Rewrite README.md (still the Vite template text).
 - [x] Technical SEO on the home page, pre-rendered service / area / blog pages, sitemap, robots, llms.txt (done 2026-10-19).
-- [ ] Add Google Business Profile URL (and any directory listings) to `business.sameAs` in `site/data/business.mjs` and to the Organization JSON-LD in `index.html`.
+- [x] LinkedIn and Facebook pages added to `business.sameAs` / `business.social`, the JSON-LD `sameAs` on Organization and LocalBusiness, the main-site footer, the generated-page footers and `llms.txt` (2026-10-20).
+- [ ] Add the Google Business Profile URL (and any directory listings) to the same `sameAs` lists once created (service-area profile, address hidden).
 - [x] Google Search Console property `https://www.jpprosupply.com/` verified by HTML file and `sitemap.xml` submitted; Bing Webmaster Tools set up (owner, 2026-10-19).
 - [x] Postal code 122003 confirmed by owner (2026-10-19). No Google Business Profile exists yet; create one, then add its URL to `sameAs`.
 - [ ] Keep adding blog posts (target 2 to 4 per month; 10 published as of 2026-10-20) and area pages for new NCR pockets.

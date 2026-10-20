@@ -143,3 +143,9 @@ Entry format:
 - **Files:** `index.html`, `site/data/business.mjs`, `site/data/services.mjs`, `scripts/build-pages.mjs`, `site/content/blog/one-supplier-electrical-plumbing-material-gurgaon.md` (new)
 - **Why:** Rank for the query that matches the actual buying reason, and give AI engines an explicit answer to "why this supplier".
 - **Status:** done — build passes, 33 URLs in sitemap, JSON-LD parses, 0 broken internal links.
+
+## 2026-10-20 04:10 — Reviews rewritten in Hinglish / Hindi, fewer face photos, social profiles linked
+- **What:** Rewrote the six placeholder testimonials in a natural Hinglish / Hindi / English mix (one in Devanagari); made the avatar optional and show an initials badge for Suresh Yadav, Imran Khan and Vikram Singh, deleting their photo files; added LinkedIn (`linkedin.com/company/144014607`) and Facebook (`facebook.com/profile.php?id=61595050932583`) as `sameAs` on the Organization and LocalBusiness JSON-LD, as icon links in the main-site footer, as text links in the generated-page footers, in `business.mjs` and in `llms.txt`.
+- **Files:** `src/components/Reviews.tsx`, `src/components/Footer.tsx`, `src/index.css`, `index.html`, `site/data/business.mjs`, `site/templates/layout.mjs`, `scripts/build-pages.mjs`, `public/avatars/{suresh,imran,vikram}.jpg` (removed), `PROJECT.md`
+- **Why:** Owner request; AI tools could not connect the social pages to the business because nothing linked them.
+- **Status:** done — build and lint pass, no hydration warnings. Reviews remain placeholders; owner advised to replace with real feedback.

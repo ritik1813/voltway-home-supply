@@ -1,20 +1,20 @@
 import { StarIcon } from './icons';
 
 // PLACEHOLDER REVIEWS — replace with real customer feedback as it comes in.
-const REVIEWS = [
+// `avatar` is optional; reviewers without a photo get an initials badge.
+const REVIEWS: { name: string; role: string; stars: number; avatar?: string; text: string }[] = [
   {
     name: 'Rohit Sharma',
     role: '3BHK Owner · Sector 57, Gurgaon',
     stars: 5,
     avatar: '/avatars/rohit.jpg',
-    text: 'Material for our full renovation arrived in one consolidated delivery — properly packed, nothing missing, everything with bill and warranty. Rates were clearly better than the market quotes we collected.',
+    text: 'Poore renovation ka material ek hi delivery mein aa gaya — wiring, switches, bathroom fittings, sab kuch. Bill aur warranty card saath mein. Market se jo quotes liye the, unse rate clearly kam tha.',
   },
   {
     name: 'Suresh Yadav',
     role: 'Contractor · Sohna Road',
     stars: 5,
-    avatar: '/avatars/suresh.jpg',
-    text: 'Delivery reached the site on the promised day, every single phase. My labour never sat idle waiting for material — for a running site, that reliability is everything.',
+    text: 'साइट पर माल बोले हुए दिन पर ही पहुँचा, हर फेज़ में। मेरी लेबर कभी मटेरियल के इंतज़ार में खाली नहीं बैठी। चलती साइट के लिए यही सबसे बड़ी बात है।',
   },
   {
     name: 'Priya & Ankit Mehra',
@@ -27,22 +27,20 @@ const REVIEWS = [
     name: 'Imran Khan',
     role: 'MEP Contractor · New Gurugram',
     stars: 5,
-    avatar: '/avatars/imran.jpg',
-    text: 'Running account across three projects. I reorder over WhatsApp and material moves to site the next day. Single billing, consistent quality, zero follow-up calls.',
+    text: 'Teen project ek hi account pe chal rahe hain. WhatsApp pe order karta hoon, agle din material site pe. Ek billing, same quality, follow-up ka koi jhanjhat nahi.',
   },
   {
     name: 'Neha Kapoor',
     role: 'Interior Designer · Golf Course Road',
     stars: 5,
     avatar: '/avatars/neha.jpg',
-    text: 'For client projects the finish has to match the boards exactly. They deliver the exact fittings and lighting I specify, on schedule — no substitutions without asking first.',
+    text: 'Client projects mein finish board se exactly match hona chahiye. Jo fittings aur lighting main specify karti hoon wahi aati hai, time pe — bina pooche koi substitution nahi.',
   },
   {
     name: 'Vikram Singh',
     role: 'Builder · Sector 82',
     stars: 5,
-    avatar: '/avatars/vikram.jpg',
-    text: 'Phase-wise supply for our tower project. Rates locked before dispatch, deliveries aligned to the construction schedule and quality consistent across every lot. Professional setup.',
+    text: 'Tower project ke liye phase-wise supply. Dispatch se pehle rate lock, delivery construction schedule ke hisaab se, aur har lot mein quality same. Professional setup hai.',
   },
 ];
 
@@ -85,7 +83,13 @@ export function Reviews() {
               <Stars count={review.stars} />
               <p className="review-text">“{review.text}”</p>
               <div className="review-who">
-                <img className="avatar" src={review.avatar} alt={review.name} />
+                {review.avatar ? (
+                  <img className="avatar" src={review.avatar} alt={review.name} width="42" height="42" loading="lazy" />
+                ) : (
+                  <span className="avatar avatar-initials" aria-hidden="true">
+                    {review.name.split(/\s+/).map((w) => w[0]).join('').slice(0, 2)}
+                  </span>
+                )}
                 <span>
                   <strong>{review.name}</strong>
                   <em>{review.role}</em>

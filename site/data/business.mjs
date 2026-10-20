@@ -55,7 +55,11 @@ export const business = {
     'GM Modular', 'Wipro', 'Jaquar', 'Astral', 'Supreme', 'Ashirvad', 'Hindware', 'Cera',
     'Kohler', 'Grohe',
   ],
-  sameAs: [],
+  sameAs: [
+    'https://www.linkedin.com/company/144014607',
+    'https://www.facebook.com/profile.php?id=61595050932583',
+  ],
+  social: { linkedin: 'https://www.linkedin.com/company/144014607', facebook: 'https://www.facebook.com/profile.php?id=61595050932583' },
 };
 
 export const faqs = [

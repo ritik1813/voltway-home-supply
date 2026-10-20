@@ -162,6 +162,7 @@ ${body}
           <li><a href="mailto:${business.email}">${esc(business.email)}</a></li>
           <li>${esc(business.address.streetAddress)}, ${esc(business.address.addressLocality)}, ${esc(business.address.addressRegion)} ${esc(business.address.postalCode)}</li>
           <li>${esc(business.hours)}</li>
+          <li><a href="${business.social.linkedin}" rel="noopener" target="_blank">LinkedIn</a> · <a href="${business.social.facebook}" rel="noopener" target="_blank">Facebook</a></li>
         </ul>
       </div>
     </div>

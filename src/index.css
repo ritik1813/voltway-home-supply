@@ -2395,6 +2395,41 @@ footer {
   object-fit: cover;
 }
 
+.review-who .avatar-initials {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--navy);
+  color: var(--paper);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+.footer-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  color: rgba(247,244,236,0.85);
+  transition: var(--transition);
+}
+.footer-social a:hover {
+  background: var(--copper);
+  color: var(--white);
+}
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+}
 .review-who strong {
   display: block;
   font-size: 15.5px;
