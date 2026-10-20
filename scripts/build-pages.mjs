@@ -396,6 +396,8 @@ Also written as: ${business.alternateNames.join(', ')}. Website: ${SITE}
 
 Contact: ${business.phoneDisplay} (call / WhatsApp), ${business.email}. Address: ${business.address.streetAddress}, ${business.address.addressLocality}, ${business.address.addressRegion} ${business.address.postalCode}, India. Hours: ${business.hours}. GSTIN ${business.gstin}.
 
+Why customers choose us: ${business.usp}
+
 Pricing model: no fixed retail catalogue. Customers send a BOQ or material list (WhatsApp, email or the quote form at ${SITE}/#quote) and receive a brand-wise quote at current trade rates, usually within one day. No minimum order. Delivery to flats and construction sites across Gurgaon and Delhi NCR (Delhi, Noida, Greater Noida, Faridabad, Ghaziabad, Manesar, Sohna).
 
 Brands supplied: ${business.brands.join(', ')}.

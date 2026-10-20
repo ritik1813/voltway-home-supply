@@ -30,9 +30,11 @@ export const business = {
     },
   ],
   description:
-    'JP Pro Supply is an electrical, plumbing and home automation material dealer based in Sector 52, Gurugram, supplying flat owners, contractors, MEP teams and builders across Gurgaon, Delhi NCR, Noida, Faridabad and Ghaziabad. Material is quoted brand-wise against your BOQ or material list at current trade rates and delivered to site.',
+    'JP Pro Supply is a one-stop electrical, plumbing and home automation material dealer based in Sector 52, Gurugram, supplying flat owners, contractors, MEP teams and builders across Gurgaon, Delhi NCR, Noida, Faridabad and Ghaziabad. Customers send one BOQ or material list and get one brand-wise quote at current trade rates and one delivery to site, instead of collecting quotes from separate electrical and sanitary shops.',
   shortDescription:
-    'Electrical, plumbing and home automation material supplier in Gurgaon and NCR. BOQ-matched quotes at trade rates, authorised brands, site delivery.',
+    'One-stop electrical, plumbing and home automation material supplier in Gurgaon and NCR. One BOQ, one quote at trade rates, one delivery.',
+  usp:
+    'Everything for a flat or site from one supplier: electrical, plumbing and sanitary, and home automation on a single quote, a single delivery and a single invoice. Customers come to us because they no longer have to visit or chase an electrical shop, a sanitary shop and an automation vendor separately.',
   areaServed: [
     'Gurugram',
     'Gurgaon',

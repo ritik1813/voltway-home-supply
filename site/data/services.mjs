@@ -6,7 +6,7 @@ export const services = [
     kicker: 'Electrical material supply',
     title: 'Electrical material supplier in Gurgaon & NCR for flats, sites and projects',
     metaTitle: 'Electrical Material Supplier in Gurgaon & NCR | Wires, Switches, MCBs, Lighting | JP Pro Supply',
-    description: 'JP Pro Supply, Sector 52 Gurgaon, supplies Polycab, Havells and Finolex wire, Legrand, Schneider, Anchor and GM Modular switches, MCBs, DBs, LED lighting, fans and conduits across Gurgaon and Delhi NCR. BOQ-matched quotes at trade rates, site delivery.',
+    description: 'JP Pro Supply, Sector 52 Gurgaon, supplies Polycab, Havells and Finolex wire, Legrand, Schneider, Anchor and GM Modular switches, MCBs, DBs, LED lighting, fans and conduits across Gurgaon and Delhi NCR. Quoted on the same BOQ as your plumbing and automation material, so one supplier covers the whole flat or site. Trade rates, site delivery.',
     lede: 'Everything from the meter to the last light point, sourced through authorised brand channels and quoted against your material list at current trade rates. Based in Sector 52, delivering across Gurgaon, Delhi, Noida, Faridabad and Ghaziabad.',
     serviceType: 'Electrical material supply',
     brands: ['Polycab', 'Havells', 'Finolex', 'Legrand', 'Schneider Electric', 'Anchor by Panasonic', 'GM Modular', 'Wipro'],
@@ -17,7 +17,7 @@ export const services = [
       'LED panel lights', 'COB and recessed downlights', 'LED strip and profile lighting', 'Track and spot lights', 'Outdoor and garden lights',
       'Ceiling fans (standard and BLDC)', 'Exhaust and ventilation fans', 'ISI PVC conduit and accessories', 'Concealed metal and PVC boxes', 'Casing-capping',
     ],
-    related: ['electrical-material-list-3bhk-flat-gurgaon', 'polycab-vs-havells-vs-finolex-house-wire', 'mcb-rccb-distribution-board-sizing-flat', 'bldc-vs-normal-ceiling-fan-gurgaon', 'boq-material-supply-contractors-builders-ncr'],
+    related: ['one-supplier-electrical-plumbing-material-gurgaon', 'electrical-material-list-3bhk-flat-gurgaon', 'polycab-vs-havells-vs-finolex-house-wire', 'mcb-rccb-distribution-board-sizing-flat', 'bldc-vs-normal-ceiling-fan-gurgaon', 'boq-material-supply-contractors-builders-ncr'],
     body: `
 ## What we supply
 
@@ -65,7 +65,7 @@ Sector 52 base, standard dispatch across all of Gurgaon (DLF phases, Golf Course
     kicker: 'Plumbing & sanitary supply',
     title: 'Plumbing & sanitary material supplier in Gurgaon & NCR',
     metaTitle: 'Plumbing & Sanitary Material Supplier in Gurgaon & NCR | CPVC, UPVC, Jaquar, Hindware | JP Pro Supply',
-    description: 'CPVC, UPVC and composite pipes and fittings from Astral, Ashirvad and Supreme, CP bath fittings from Jaquar, Kohler and Grohe, sanitaryware from Hindware and Cera, tanks, valves and drainage. Quoted against your BOQ, delivered across Gurgaon and Delhi NCR by JP Pro Supply.',
+    description: 'CPVC, UPVC and composite pipes and fittings from Astral, Ashirvad and Supreme, CP bath fittings from Jaquar, Kohler and Grohe, sanitaryware from Hindware and Cera, tanks, valves and drainage. Quoted on the same BOQ as your electrical material, one supplier for the whole flat or site, delivered across Gurgaon and Delhi NCR by JP Pro Supply.',
     lede: 'Complete water supply, bathroom and drainage material, from the CPVC inside the wall to the CP fittings and sanitaryware you see every day. Quoted brand-wise against your plumber’s list or project BOQ, delivered across Gurgaon and NCR.',
     serviceType: 'Plumbing and sanitary material supply',
     brands: ['Jaquar', 'Astral', 'Supreme', 'Ashirvad', 'Hindware', 'Cera', 'Kohler', 'Grohe'],
@@ -76,7 +76,7 @@ Sector 52 base, standard dispatch across all of Gurgaon (DLF phases, Golf Course
       'Wall-hung and floor-mounted WCs', 'Wash basins and counter-top basins', 'Urinals and accessories',
       'SWR and drainage pipes', 'Floor traps and gratings', 'Overhead water tanks', 'Bathroom accessories',
     ],
-    related: ['cpvc-vs-upvc-vs-composite-pipes-gurgaon-flats', 'bathroom-renovation-plumbing-material-checklist', 'electrical-material-list-3bhk-flat-gurgaon', 'boq-material-supply-contractors-builders-ncr'],
+    related: ['one-supplier-electrical-plumbing-material-gurgaon', 'cpvc-vs-upvc-vs-composite-pipes-gurgaon-flats', 'bathroom-renovation-plumbing-material-checklist', 'electrical-material-list-3bhk-flat-gurgaon', 'boq-material-supply-contractors-builders-ncr'],
     body: `
 ## What we supply
 
@@ -172,11 +172,11 @@ Sector 52 base, delivering across Gurgaon, Delhi, Noida, Greater Noida, Faridaba
   },
   {
     slug: 'boq-material-supply-contractors-builders-ncr',
-    navTitle: 'BOQ material supply for contractors & builders, NCR',
-    kicker: 'Project & bulk supply',
-    title: 'BOQ-matched electrical & plumbing material supply for contractors and builders in Gurgaon & NCR',
-    metaTitle: 'BOQ Material Supply for Contractors & Builders in Gurgaon & NCR | Electrical & Plumbing | JP Pro Supply',
-    description: 'Brand-wise quotes against your BOQ, rates held for the order, phase-wise scheduled dispatch and one running account for multi-tower projects. Electrical, plumbing and home automation material for contractors, MEP teams and builders across Gurgaon and Delhi NCR from JP Pro Supply.',
+    navTitle: 'One-stop BOQ supply for contractors & builders, NCR',
+    kicker: 'One supplier, one quote',
+    title: 'One-stop electrical & plumbing material supply from a single BOQ for contractors and builders in Gurgaon & NCR',
+    metaTitle: 'One-Stop Electrical & Plumbing Material Supplier for Contractors & Builders, Gurgaon & NCR | Single BOQ Quote | JP Pro Supply',
+    description: 'Send one BOQ and get electrical, plumbing and home automation material quoted together, brand-wise, with rates held, phase-wise dispatch and one running account, instead of collecting quotes from separate electrical and sanitary suppliers. Contractors, MEP teams and builders across Gurgaon and Delhi NCR. JP Pro Supply.',
     lede: 'For electrical and plumbing contractors, MEP teams and developers who need material priced against the BOQ, dispatched in phases and billed on one account, instead of requoting every order at a retail counter.',
     serviceType: 'Construction material procurement and supply',
     brands: ['Polycab', 'Havells', 'Finolex', 'Legrand', 'Schneider Electric', 'Astral', 'Ashirvad', 'Jaquar', 'Hindware'],
@@ -184,7 +184,7 @@ Sector 52 base, delivering across Gurgaon, Delhi, Noida, Greater Noida, Faridaba
       'BOQ-based brand-wise quotation', 'Rate holding for confirmed orders', 'Phase-wise scheduled dispatch', 'Mid-project top-up orders',
       'Single running account across towers and phases', 'Consolidated GST billing', 'Equivalent-brand options on long lead items', 'Site delivery across Gurgaon and NCR',
     ],
-    related: ['how-to-get-boq-quote-electrical-plumbing-supplier', 'builders-guide-choosing-material-supplier-ncr', 'electrical-material-supplier-gurgaon', 'plumbing-material-supplier-gurgaon'],
+    related: ['one-supplier-electrical-plumbing-material-gurgaon', 'how-to-get-boq-quote-electrical-plumbing-supplier', 'builders-guide-choosing-material-supplier-ncr', 'electrical-material-supplier-gurgaon', 'plumbing-material-supplier-gurgaon'],
     body: `
 ## How project supply works with us
 
