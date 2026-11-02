@@ -155,3 +155,9 @@ Entry format:
 - **Files:** `src/components/{TopBar,Header,Hero,Products,Packages,Process,HowWeOperate,WhyUs,CtaBand,QuoteForm,Footer}.tsx`
 - **Why:** Position as a long-standing supply partner rather than a quote desk, to attract customers who want one supplier for the whole project.
 - **Status:** done — build, lint and hydration checks pass; package and category prefill still work with the new CTA labels.
+
+## 2026-11-02 — Vercel Analytics
+- **What:** Added `@vercel/analytics` (2.0.1). `<Analytics />` from `@vercel/analytics/react` is rendered next to `<App />` in `src/main.tsx` for the home page; the pre-rendered pages (`site/templates/layout.mjs`) include Vercel's `window.va` shim and `<script defer src="/_vercel/insights/script.js">` directly, since they are not React. Owner enabled Web Analytics in the Vercel dashboard.
+- **Files:** `package.json`, `package-lock.json`, `src/main.tsx`, `site/templates/layout.mjs`
+- **Why:** Count visitors and page views across the home page and all SEO pages.
+- **Status:** done — build and lint pass; script tag confirmed on home (after hydration) and on static pages. The script 404s on local preview by design; it is served only on Vercel.

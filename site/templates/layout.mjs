@@ -111,6 +111,8 @@ ${modifiedTime ? `<meta property="article:modified_time" content="${modifiedTime
 <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/static/pages.css">
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 <header class="site-header">

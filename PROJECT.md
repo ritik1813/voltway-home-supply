@@ -38,7 +38,7 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 - `public/` — static assets served as-is: brand logos, category photos, review avatars, hero video, favicon, `robots.txt`, `og-image.png`, `static/pages.css` (stylesheet for the pre-rendered pages).
 - `site/data/business.mjs` — single source of business facts (name, phone, email, GSTIN, address, geo, hours, brands) for the generated pages and `llms.txt`. `site/data/services.mjs` and `site/data/areas.mjs` hold the service and area page content; `site/content/blog/*.md` are blog posts with frontmatter (`title`, `description`, `date`, `category`, `keywords`, `related`) and a `## Frequently asked questions` section that also feeds FAQPage schema. `site/templates/layout.mjs` is the shared HTML shell.
 - `scripts/build-pages.mjs` — generator (uses `marked`); `scripts/make-og-image.mjs` — one-off OG image renderer using the preinstalled Playwright Chromium.
-- External services: WhatsApp `wa.me` deep links only. Fonts are self-hosted (`public/fonts/*.woff2`, latin subset, variable weight; `@font-face` at the top of `src/index.css` and `public/static/pages.css`).
+- External services: WhatsApp `wa.me` deep links, Vercel Web Analytics (`@vercel/analytics` on the home page, script tag on generated pages). Fonts are self-hosted (`public/fonts/*.woff2`, latin subset, variable weight; `@font-face` at the top of `src/index.css` and `public/static/pages.css`).
 
 ## Tech Stack
 | Layer | Choice | Why |
