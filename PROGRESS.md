@@ -149,3 +149,9 @@ Entry format:
 - **Files:** `src/components/Reviews.tsx`, `src/components/Footer.tsx`, `src/index.css`, `index.html`, `site/data/business.mjs`, `site/templates/layout.mjs`, `scripts/build-pages.mjs`, `public/avatars/{suresh,imran,vikram}.jpg` (removed), `PROJECT.md`
 - **Why:** Owner request; AI tools could not connect the social pages to the business because nothing linked them.
 - **Status:** done — build and lint pass, no hydration warnings. Reviews remain placeholders; owner advised to replace with real feedback.
+
+## 2026-11-02 — Repositioned home page copy from "get a quote" to "one trusted supplier for every project"
+- **What:** Owner reported many leads only collecting quotes. Rewrote the copy (no layout or structural change) so every section leads with the one-stop, trusted, best-trade-rate, any-project-size message instead of the quotation: hero lead and trust items, hero / header / top-bar CTAs ("Start Your Project With Us", "Start Your Project", "Small Flats to Large Projects"), Products intro and panel buttons, Packages heading, descriptions, bullets and CTA labels, Process step titles and text, How We Operate heading and three cards, Why Us intro, CTA band heading / text / buttons, quote-form kicker, heading, intro, two labels, button default ("Start My Project") and note, footer tagline. Hero headline and FAQ untouched.
+- **Files:** `src/components/{TopBar,Header,Hero,Products,Packages,Process,HowWeOperate,WhyUs,CtaBand,QuoteForm,Footer}.tsx`
+- **Why:** Position as a long-standing supply partner rather than a quote desk, to attract customers who want one supplier for the whole project.
+- **Status:** done — build, lint and hydration checks pass; package and category prefill still work with the new CTA labels.

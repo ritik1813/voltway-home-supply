@@ -258,8 +258,8 @@ export function Products({ onSelectCategory }: ProductsProps) {
           <span className="kicker">Product Categories</span>
           <h2>Every material your home needs, in one place.</h2>
           <p>
-            Browse the full range we supply against your list or BOQ. Open a category to see
-            every item — then send us the list for a brand-wise trade quote.
+            One supplier for the complete list: electrical, plumbing &amp; sanitary and home automation,
+            so you never coordinate three shops again. Open a category to see everything we stock.
           </p>
         </div>
 
@@ -298,17 +298,17 @@ export function Products({ onSelectCategory }: ProductsProps) {
               <div className="prod-panel-cta">
                 <a href={waLink(openCategory.title)} className="btn btn-primary btn-sm">
                   <WhatsAppIcon />
-                  Get quote for this list
+                  Discuss this category on WhatsApp
                 </a>
                 <a
                   href="#quote"
                   className="btn btn-ghost btn-sm"
                   onClick={() => {
-                    const ctaText = `Request ${openCategory.title} Quote`;
+                    const ctaText = `Start My ${openCategory.title} Supply`;
                     onSelectCategory?.(openCategory.title, ctaText);
                   }}
                 >
-                  Use quote form
+                  Plan it with us
                 </a>
               </div>
             </div>

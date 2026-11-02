@@ -6,8 +6,8 @@ export function WhyUs() {
           <span className="kicker">Why JP Pro Supply</span>
           <h2>A few reasons site owners &amp; builders partner with us.</h2>
           <p>
-            We align our supply logistics with your execution schedule, ensuring authentic materials
-            reach your site at unbeatable commercial rates.
+            A trusted Gurgaon supplier for years: genuine material across all three categories,
+            delivered to your schedule, at rates that beat the market.
           </p>
         </div>
 

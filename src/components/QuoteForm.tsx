@@ -20,7 +20,7 @@ interface PrefillState {
 export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
   const [role, setRole] = useState(ROLES[0]);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [submitBtnText, setSubmitBtnText] = useState('Send Requirement');
+  const [submitBtnText, setSubmitBtnText] = useState('Start My Project');
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
   const [filePreview, setFilePreview] = useState<string | null>(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -113,12 +113,12 @@ export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
       <div className="wrap">
         <div className="quote-grid">
           <div className="quote-info">
-            <span className="kicker">Procurement Request</span>
+            <span className="kicker">Start your project</span>
             <h2 style={{ fontSize: 'clamp(30px,3.4vw,38px)', marginBottom: '14px' }}>
-              Request a trade quotation.
+              Tell us what you are building.
             </h2>
             <p>
-              Submit your architectural bill of quantities (BOQ) or material list. Our procurement team will verify your requirements and deliver a transparent, itemised quote at direct trade rates.
+              A single flat, a builder floor or a multi-tower site. We help finalise the complete electrical, plumbing and home automation list, source genuine brands at the best trade rates and deliver in stages to your site. One supplier, start to finish.
             </p>
 
             <div style={{ marginTop: '30px' }}>
@@ -233,14 +233,14 @@ export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
 
             <div className="form-row">
               <div className="field full">
-                <label>What do you need? (Write details here or upload list below)</label>
+                <label>Tell us about the project (or upload your list below)</label>
                 <textarea placeholder="e.g. Complete electrical + plumbing material list or descriptions..." value={details} onChange={(e) => setDetails(e.target.value)}></textarea>
               </div>
             </div>
 
             <div className="form-row">
               <div className="field full">
-                <label>Attach BOQ, Material List or Photo/Image of handwritten note</label>
+                <label>Attach a list, BOQ, floor plan or photo of a handwritten note (optional)</label>
                 <div
                   className={`file-upload-zone ${isDragging ? 'dragover' : ''} ${uploadedFile ? 'has-file' : ''}`}
                   onDragOver={handleDragOver}
@@ -314,7 +314,7 @@ export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
             <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
               {submitBtnText}
             </button>
-            <p className="form-note">Clicking send opens WhatsApp with your details filled in. We respond within 24 hours on business days — usually much faster.</p>
+            <p className="form-note">This opens WhatsApp with your details filled in. We reply within 24 hours on business days, usually much faster, and there is no obligation.</p>
           </form>
         </div>
       </div>

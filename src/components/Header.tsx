@@ -39,7 +39,7 @@ export function Header() {
           <a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
         </div>
         <div className="nav-cta">
-          <a href="#quote" className="btn btn-ghost btn-sm">Get a Quote</a>
+          <a href="#quote" className="btn btn-ghost btn-sm">Start Your Project</a>
           <a href="https://wa.me/919310765871" className="btn btn-primary btn-sm nav-wa-btn">
             <WhatsAppIcon />
             <span className="nav-wa-label">WhatsApp Us</span>

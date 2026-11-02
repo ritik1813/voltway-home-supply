@@ -11,7 +11,7 @@ export function TopBar() {
           </a>
         </div>
         <div className="left">
-          <a href="#quote">All Order Sizes Welcome</a>
+          <a href="#quote">Small Flats to Large Projects</a>
           <a href="#quote">Mon–Sat, 9:30am–7:30pm</a>
         </div>
       </div>

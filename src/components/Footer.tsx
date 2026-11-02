@@ -15,8 +15,8 @@ export function Footer() {
               </span>
             </div>
             <p style={{ fontSize: '14px', lineHeight: 1.7, maxWidth: '280px', color: 'rgba(247,244,236,0.6)' }}>
-              Electrical, plumbing and home automation material supply for flat owners,
-              contractors and builders across Gurgaon &amp; NCR.
+              Your one-stop, trusted supplier for electrical, plumbing and home automation
+              material. Small flats to large projects across Gurgaon &amp; NCR.
             </p>
           </div>
           <div className="footer-col">

@@ -1,8 +1,8 @@
 const STEPS = [
-  { num: '01', title: 'Share your material list', desc: 'Send your BOQ, floor plan or material list over WhatsApp or the quote form — for one flat or a full project.' },
-  { num: '02', title: 'Get a quote', desc: 'We quote against your list at current rates, brand-wise, usually within a day.' },
-  { num: '03', title: 'We source and deliver', desc: 'Material is sourced from our authorised dealer network and delivered to your site or flat across Gurgaon and NCR.' },
-  { num: '04', title: 'Reorder anytime', desc: 'Need more later, for the next room, phase or tower — reorder against the same list.' },
+  { num: '01', title: 'Tell us about your project', desc: 'A flat, a builder floor or a multi-tower site. Share whatever you have: a list, a BOQ, a floor plan or just a description, over WhatsApp or the form.' },
+  { num: '02', title: 'We plan and price it with you', desc: 'We check the list across electrical, plumbing and automation, fill the gaps, suggest brands for your budget and price it brand-wise at trade rates.' },
+  { num: '03', title: 'We source and deliver', desc: 'Genuine material from authorised brand channels, delivered in stages to your flat or site across Gurgaon and NCR, with one GST invoice.' },
+  { num: '04', title: 'One partner for the whole project', desc: 'Top-ups, the next phase, the next tower: same account, same rates, same person to call.' },
 ];
 
 export function Process() {
@@ -11,7 +11,7 @@ export function Process() {
       <div className="wrap">
         <div className="section-head">
           <span className="kicker">How it works</span>
-          <h2>How an order works, start to finish.</h2>
+          <h2>Working with us, start to finish.</h2>
         </div>
         <div className="process-wrap">
           <div className="process-line"></div>

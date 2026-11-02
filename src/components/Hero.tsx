@@ -62,10 +62,11 @@ export function Hero() {
             <span className="accent">Across Gurgaon &amp; NCR.</span>
           </h1>
           <p className="lead">
-            For homeowners, contractors, builders, and construction projects of every scale.
+            Gurgaon&apos;s one-stop, trusted material partner for years. Electrical, plumbing and home automation
+            for every project, a single flat to a full tower, from one supplier at the best trade rates.
           </p>
           <div className="hero-actions">
-            <a href="#quote" className="btn btn-primary">Request a BOQ Quote</a>
+            <a href="#quote" className="btn btn-primary">Start Your Project With Us</a>
             <a href="https://wa.me/919310765871" className="btn btn-light">
               <WhatsAppIcon />
               Chat on WhatsApp
@@ -74,15 +75,15 @@ export function Hero() {
           <div className="hero-trust">
             <div className="item">
               <CircleCheckIcon />
-              BOQ-Matched Quoting
+              All Three Categories, One Supplier
             </div>
             <div className="item">
               <CircleCheckIcon />
-              100% Authorised Sourcing
+              Genuine Brands at Best Trade Rates
             </div>
             <div className="item">
               <CircleCheckIcon />
-              NCR Delivery Network
+              Small Flats to Large Projects
             </div>
           </div>
         </div>
