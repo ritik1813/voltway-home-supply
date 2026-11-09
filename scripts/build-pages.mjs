@@ -396,7 +396,7 @@ Also written as: ${business.alternateNames.join(', ')}. Website: ${SITE}
 
 Contact: ${business.phoneDisplay} (call / WhatsApp), ${business.email}. Address: ${business.address.streetAddress}, ${business.address.addressLocality}, ${business.address.addressRegion} ${business.address.postalCode}, India. Hours: ${business.hours}. GSTIN ${business.gstin}.
 
-Social profiles: LinkedIn ${business.social.linkedin} · Facebook ${business.social.facebook}
+Social profiles: LinkedIn ${business.social.linkedin} · Facebook ${business.social.facebook} · Instagram ${business.social.instagram}
 
 Why customers choose us: ${business.usp}
 

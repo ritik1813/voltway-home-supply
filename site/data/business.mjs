@@ -58,8 +58,9 @@ export const business = {
   sameAs: [
     'https://www.linkedin.com/company/144014607',
     'https://www.facebook.com/profile.php?id=61595050932583',
+    'https://www.instagram.com/jpprosupply/',
   ],
-  social: { linkedin: 'https://www.linkedin.com/company/144014607', facebook: 'https://www.facebook.com/profile.php?id=61595050932583' },
+  social: { linkedin: 'https://www.linkedin.com/company/144014607', facebook: 'https://www.facebook.com/profile.php?id=61595050932583', instagram: 'https://www.instagram.com/jpprosupply/' },
 };
 
 export const faqs = [
