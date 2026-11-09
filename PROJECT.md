@@ -68,6 +68,7 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 - [ ] Rewrite README.md (still the Vite template text).
 - [x] Technical SEO on the home page, pre-rendered service / area / blog pages, sitemap, robots, llms.txt (done 2026-10-19).
 - [x] LinkedIn and Facebook pages added to `business.sameAs` / `business.social`, the JSON-LD `sameAs` on Organization and LocalBusiness, the main-site footer, the generated-page footers and `llms.txt` (2026-10-20).
+- [x] Instagram (`instagram.com/jpprosupply`) added to the same places as LinkedIn and Facebook (2026-11-09).
 - [ ] Add the Google Business Profile URL (and any directory listings) to the same `sameAs` lists once created (service-area profile, address hidden).
 - [x] Google Search Console property `https://www.jpprosupply.com/` verified by HTML file and `sitemap.xml` submitted; Bing Webmaster Tools set up (owner, 2026-10-19).
 - [x] Postal code 122003 confirmed by owner (2026-10-19). No Google Business Profile exists yet; create one, then add its URL to `sameAs`.

@@ -161,3 +161,9 @@ Entry format:
 - **Files:** `package.json`, `package-lock.json`, `src/main.tsx`, `site/templates/layout.mjs`
 - **Why:** Count visitors and page views across the home page and all SEO pages.
 - **Status:** done — build and lint pass; script tag confirmed on home (after hydration) and on static pages. The script 404s on local preview by design; it is served only on Vercel.
+
+## 2026-11-09 — Instagram profile linked
+- **What:** Added the Instagram profile (`instagram.com/jpprosupply`, handle confirmed by owner) everywhere LinkedIn and Facebook already appear: icon link in the main-site footer, text link in the generated-page footers, `business.sameAs` / `business.social`, the JSON-LD `sameAs` on Organization and LocalBusiness, and `llms.txt`.
+- **Files:** `src/components/Footer.tsx`, `index.html`, `site/data/business.mjs`, `site/templates/layout.mjs`, `scripts/build-pages.mjs`, `PROJECT.md`
+- **Why:** Owner request; the business now has an Instagram account.
+- **Status:** done — build and lint pass, JSON-LD parses, footer checked in a headless browser (three icons, all open in a new tab).
