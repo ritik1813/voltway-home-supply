@@ -164,7 +164,7 @@ ${body}
           <li><a href="mailto:${business.email}">${esc(business.email)}</a></li>
           <li>${esc(business.address.streetAddress)}, ${esc(business.address.addressLocality)}, ${esc(business.address.addressRegion)} ${esc(business.address.postalCode)}</li>
           <li>${esc(business.hours)}</li>
-          <li><a href="${business.social.linkedin}" rel="noopener" target="_blank">LinkedIn</a> · <a href="${business.social.facebook}" rel="noopener" target="_blank">Facebook</a> · <a href="${business.social.instagram}" rel="noopener" target="_blank">Instagram</a></li>
+          <li><a href="${business.social.linkedin}" rel="noopener" target="_blank">LinkedIn</a> · <a href="${business.social.facebook}" rel="noopener" target="_blank">Facebook</a> · <a href="${business.social.instagram}" rel="noopener" target="_blank">Instagram</a> · <a href="${business.social.medium}" rel="noopener" target="_blank">Medium</a> · <a href="${business.social.google}" rel="noopener" target="_blank">Google</a></li>
         </ul>
       </div>
     </div>

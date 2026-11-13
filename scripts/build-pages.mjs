@@ -3,7 +3,7 @@
 // These pages link TO the main site; the React app never links to them.
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { marked } from 'marked';
 import { business, faqs as homeFaqs } from '../site/data/business.mjs';
 import { services } from '../site/data/services.mjs';
@@ -41,6 +41,7 @@ function write(relPath, html) {
 }
 
 function parseFrontmatter(raw) {
+  raw = raw.replace(/\r\n/g, '\n'); // Windows checkouts convert line endings to CRLF
   const m = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
   if (!m) return { data: {}, content: raw };
   const data = {};
@@ -109,7 +110,7 @@ function webPageLd(pathname, name, description, extra = {}) {
 // emits dist-ssr/entry-server.js. Render <App/> to HTML and place it inside #root so the
 // first paint needs no JavaScript; main.tsx hydrates on top of it.
 {
-  const { render } = await import(path.join(root, 'dist-ssr/entry-server.js'));
+  const { render } = await import(pathToFileURL(path.join(root, 'dist-ssr/entry-server.js')).href);
   const indexFile = path.join(dist, 'index.html');
   const html = fs.readFileSync(indexFile, 'utf8');
   const shell = '<div id="root"></div>';
@@ -396,7 +397,7 @@ Also written as: ${business.alternateNames.join(', ')}. Website: ${SITE}
 
 Contact: ${business.phoneDisplay} (call / WhatsApp), ${business.email}. Address: ${business.address.streetAddress}, ${business.address.addressLocality}, ${business.address.addressRegion} ${business.address.postalCode}, India. Hours: ${business.hours}. GSTIN ${business.gstin}.
 
-Social profiles: LinkedIn ${business.social.linkedin} · Facebook ${business.social.facebook} · Instagram ${business.social.instagram}
+Social profiles: LinkedIn ${business.social.linkedin} · Facebook ${business.social.facebook} · Instagram ${business.social.instagram} · Medium ${business.social.medium} · Google Business Profile ${business.social.google}
 
 Why customers choose us: ${business.usp}
 

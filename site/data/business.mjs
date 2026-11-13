@@ -56,11 +56,22 @@ export const business = {
     'Kohler', 'Grohe',
   ],
   sameAs: [
-    'https://www.linkedin.com/company/144014607',
-    'https://www.facebook.com/profile.php?id=61595050932583',
+    'https://www.linkedin.com/company/jp-pro-supply',
+    'https://www.facebook.com/jpprosupply',
     'https://www.instagram.com/jpprosupply/',
+    'https://jpprosupply.medium.com/',
+    // Google Business Profile, as its Knowledge Graph entity URL (what social.google redirects to).
+    'https://www.google.com/search?kgmid=/g/11p2rpj1yb',
   ],
-  social: { linkedin: 'https://www.linkedin.com/company/144014607', facebook: 'https://www.facebook.com/profile.php?id=61595050932583', instagram: 'https://www.instagram.com/jpprosupply/' },
+  // LinkedIn must stay the named URL: the numeric /company/144014607 form sends logged-out visitors and crawlers to a login page.
+  // google is the share link Google gives the owner for the Business Profile; it is the one shown to visitors.
+  social: {
+    linkedin: 'https://www.linkedin.com/company/jp-pro-supply',
+    facebook: 'https://www.facebook.com/jpprosupply',
+    instagram: 'https://www.instagram.com/jpprosupply/',
+    medium: 'https://jpprosupply.medium.com/',
+    google: 'https://share.google/wSZoDKyqGNLn5m9LR',
+  },
 };
 
 export const faqs = [

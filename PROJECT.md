@@ -69,7 +69,10 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 - [x] Technical SEO on the home page, pre-rendered service / area / blog pages, sitemap, robots, llms.txt (done 2026-10-19).
 - [x] LinkedIn and Facebook pages added to `business.sameAs` / `business.social`, the JSON-LD `sameAs` on Organization and LocalBusiness, the main-site footer, the generated-page footers and `llms.txt` (2026-10-20).
 - [x] Instagram (`instagram.com/jpprosupply`) added to the same places as LinkedIn and Facebook (2026-11-09).
-- [ ] Add the Google Business Profile URL (and any directory listings) to the same `sameAs` lists once created (service-area profile, address hidden).
+- [x] LinkedIn link changed to the named URL `linkedin.com/company/jp-pro-supply` (the numeric `/company/144014607` form sends logged-out visitors and crawlers to a login page) and Medium (`jpprosupply.medium.com`) added to the same places as the other profiles (2026-11-13).
+- [ ] Off-site, owner: fill the LinkedIn overview and gain followers (LinkedIn serves the page `noindex` while it is thin); turn the plain-text `jpprosupply.com` in the Medium post into a hyperlink; put the website and the other profiles in every profile's bio / links.
+- [x] Facebook link changed to the username URL `facebook.com/jpprosupply`; Google Business Profile added to `sameAs` (entity URL `google.com/search?kgmid=/g/11p2rpj1yb`) and to the footers and `llms.txt` (share link `share.google/wSZoDKyqGNLn5m9LR`) (2026-11-13).
+- [ ] Add the JustDial listing (full `justdial.com/Gurgaon/..._BZDET` URL needed from the owner; the short link `jsdl.in/DT-233SGD2XWBE` could not be confirmed) and any further directory listings to the same `sameAs` lists.
 - [x] Google Search Console property `https://www.jpprosupply.com/` verified by HTML file and `sitemap.xml` submitted; Bing Webmaster Tools set up (owner, 2026-10-19).
 - [x] Postal code 122003 confirmed by owner (2026-10-19). No Google Business Profile exists yet; create one, then add its URL to `sameAs`.
 - [ ] Keep adding blog posts (target 2 to 4 per month; 10 published as of 2026-10-20) and area pages for new NCR pockets.
