@@ -2,9 +2,10 @@
 title: "Polycab vs Havells vs Finolex: which house wire should you buy in Gurgaon?"
 description: "A dealer's comparison of the three house-wire brands most Gurgaon electricians ask for: conductor quality, FR vs FRLS vs HFFR grades, price positioning, how to spot fake wire in the NCR market and which to choose for a flat, a builder floor or a project."
 date: 2026-10-19
+updated: 2026-11-15
 category: Electrical
 keywords: polycab vs havells wire, finolex vs polycab, best house wire brand india, FR vs FRLS wire, house wiring wire gurgaon, fake wire check
-related: electrical-material-supplier-gurgaon, electrical-material-list-3bhk-flat-gurgaon, mcb-rccb-distribution-board-sizing-flat
+related: fr-vs-frls-vs-hrfr-vs-hffr-house-wire, electrical-material-supplier-gurgaon, electrical-material-list-3bhk-flat-gurgaon, mcb-rccb-distribution-board-sizing-flat
 ---
 
 Ask three electricians in Gurgaon which wire to buy and you will hear Polycab, Havells and Finolex, usually in that order and usually with strong opinions. All three are ISI-marked, all three make genuinely good wire, and the honest answer is that the grade you choose (FR, FRLS or HFFR) and whether the coil is genuine matter more than which of the three names is on it. Here is how we see them as a dealer who sells all three.
@@ -15,7 +16,7 @@ Ask three electricians in Gurgaon which wire to buy and you will hear Polycab, H
 |---|---|---|---|
 | Market position | Largest wire and cable maker in India, the default for contractors | Premium consumer brand, strong retail presence | Long-established, popular with electricians in Delhi NCR |
 | Typical price band | Middle | Highest of the three | Middle, often a little below Polycab |
-| Grades commonly stocked | FR, FRLS, HFFR (Green Wire) | FR, FRLS, HFFR (Lifeline, Life Guard) | FR, FRLS, HFFR |
+| Grades commonly stocked | FR, FRLS, heat-resistant low-smoke (Green Wire), HFFR | HRFR (Life Line Plus), FRLS (Life Guard), HFFR (Life Shield) | FR, FRLS |
 | Conductor | Electrolytic copper, multi-strand | Electrolytic copper, multi-strand | Electrolytic copper, multi-strand |
 | Where it is strongest | Projects and bulk; widest size range | Flats where the owner is brand-conscious | Value with a trusted name; wide electrician acceptance |
 | Counterfeit risk in NCR | High (most-copied brand) | Medium | Medium |
@@ -30,7 +31,9 @@ Prices move with copper and are quoted per coil at the time of order, which is w
 
 - **FR (flame retardant):** the insulation resists catching fire and self-extinguishes. The minimum you should buy.
 - **FRLS (flame retardant low smoke):** adds low-smoke, low-halogen properties. In a fire it produces far less of the dense, acidic smoke that makes a stairwell impassable. The sensible choice for any high-rise flat in Gurgaon.
-- **HFFR / LSZH (halogen-free flame retardant, low smoke zero halogen):** no halogens at all, so no corrosive gas. Specified in hospitals, data rooms and premium projects, increasingly in high-end residences. Each brand has its own name for it: Polycab Green Wire, Havells Life Guard, Finolex HFFR.
+- **HFFR / LSZH (halogen-free flame retardant, low smoke zero halogen):** no halogens at all, so no corrosive gas. Specified in hospitals, data rooms and premium projects, increasingly in high-end residences. Havells sells it as Life Shield and Polycab labels it HFFR. Polycab's well-known Green Wire is a heat-resistant low-smoke wire, not a halogen-free one.
+
+We compare the grades in detail, including HRFR, in [FR vs FRLS vs HRFR vs HFFR wire](/blog/fr-vs-frls-vs-hrfr-vs-hffr-house-wire/).
 
 **Warranty and after-sales.** All three offer long warranties on house wire, but a warranty claim needs an invoice from an authorised channel. Buying a coil from a roadside counter with a cash memo effectively voids it.
 

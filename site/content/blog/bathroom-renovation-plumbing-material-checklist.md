@@ -2,9 +2,10 @@
 title: "Bathroom renovation plumbing material checklist for a Gurgaon flat"
 description: "Everything a single bathroom renovation needs from the pipe inside the wall to the last accessory, in the order it is used: CPVC and fittings, valves, concealed bodies, CP fittings, sanitaryware, drainage and accessories, with brand pointers (Jaquar, Kohler, Grohe, Hindware, Cera) and the items owners forget."
 date: 2026-10-19
+updated: 2026-11-15
 category: Plumbing
 keywords: bathroom renovation material list, bathroom plumbing checklist, concealed cistern vs floor mounted, jaquar vs kohler, cp fittings list, bathroom material cost gurgaon
-related: plumbing-material-supplier-gurgaon, cpvc-vs-upvc-vs-composite-pipes-gurgaon-flats
+related: jaquar-vs-cera-vs-hindware-vs-kohler-bathroom-fittings, plumbing-material-supplier-gurgaon, cpvc-vs-upvc-vs-composite-pipes-gurgaon-flats
 ---
 
 A bathroom renovation in a Gurgaon flat typically takes two to three weeks, and almost every delay we hear about traces back to a missing material item: the concealed body that was not ordered with the pipe, the flush plate that arrived in a different finish, the floor trap that did not match the tile thickness. This checklist is organised in the order the plumber needs things, so you can order in two lots and have nothing missing.
@@ -46,7 +47,7 @@ Brands: Hindware, Cera, Jaquar, Kohler, Parryware, with Kohler and Jaquar's prem
 - Bath spout if there is a tub or a bucket-fill point.
 - Waste coupling and bottle trap for the basin.
 
-Brands: Jaquar (Kubix, Continental, Florentine, Alive, Aria series), Kohler, Grohe, Hindware, Cera, Roca. Jaquar is the default in Gurgaon for value and spare availability; Kohler and Grohe where the designer specifies.
+Brands: Jaquar (Kubix, Continental, Florentine, Alive, Aria series), Kohler, Grohe, Hindware, Cera, Roca. Jaquar is the default in Gurgaon for value and spare availability; Kohler and Grohe where the designer specifies. The brands are compared in [Jaquar vs Cera vs Hindware vs Kohler](/blog/jaquar-vs-cera-vs-hindware-vs-kohler-bathroom-fittings/).
 
 **Accessories.** Towel rail or ring, robe hooks, soap dish, tumbler holder, paper holder, shelf, mirror, mirror light. Order in the same finish as the CP fittings.
 

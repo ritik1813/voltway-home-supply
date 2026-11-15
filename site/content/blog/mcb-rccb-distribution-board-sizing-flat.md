@@ -2,9 +2,10 @@
 title: "MCB, RCCB and distribution board sizing for a flat: a plain-language guide"
 description: "What each device in your flat's distribution board does, how to choose MCB ratings for lights, sockets, ACs and geysers, why you need an RCCB and whether to split it, how many ways your DB should have, and which brands to buy in Gurgaon."
 date: 2026-10-19
+updated: 2026-11-15
 category: Electrical
 keywords: MCB rating for AC, RCCB for home, distribution board size flat, 32A MCB geyser, SPN DB 3bhk, MCB vs RCCB, havells legrand schneider MCB
-related: electrical-material-supplier-gurgaon, electrical-material-list-3bhk-flat-gurgaon, polycab-vs-havells-vs-finolex-house-wire
+related: havells-vs-legrand-vs-schneider-mcb, electrical-material-supplier-gurgaon, electrical-material-list-3bhk-flat-gurgaon, polycab-vs-havells-vs-finolex-house-wire
 ---
 
 The distribution board is the one part of a flat's electrical system that owners never look at and electricians rarely explain. It is also the part that decides whether a fault trips one circuit or burns a wall. This guide explains what goes in a flat's DB, how the ratings are chosen, and the mistakes we see on lists from Gurgaon sites.
@@ -66,7 +67,7 @@ Choose a **double-door** metal DB (inner door covers the busbar, outer door hide
 
 ## Brands and buying
 
-Havells, Legrand, Schneider Electric, Siemens, L&T and ABB all make reliable residential MCBs and RCCBs. Mixing brands inside a DB is poor practice: the busbar pitch and clip dimensions are designed for each brand's own range, and consultants will reject it on a project. Pick one brand for the DB, isolator, RCCB and all MCBs.
+Havells, Legrand, Schneider Electric, Siemens, L&T and ABB all make reliable residential MCBs and RCCBs. Mixing brands inside a DB is poor practice: the busbar pitch and clip dimensions are designed for each brand's own range, and consultants will reject it on a project. Pick one brand for the DB, isolator, RCCB and all MCBs. We compare the three most common makes in [Havells vs Legrand vs Schneider](/blog/havells-vs-legrand-vs-schneider-mcb/).
 
 Counterfeits exist here too, especially for Havells and Schneider. Buy through authorised channels with a GST invoice; the device that fails to trip in a fault is not the place to save money.
 

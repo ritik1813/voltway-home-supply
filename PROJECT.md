@@ -75,7 +75,9 @@ A plain, genuine local-business page — not a startup landing page. Copy stays 
 - [ ] Add the JustDial listing (full `justdial.com/Gurgaon/..._BZDET` URL needed from the owner; the short link `jsdl.in/DT-233SGD2XWBE` could not be confirmed) and any further directory listings to the same `sameAs` lists.
 - [x] Google Search Console property `https://www.jpprosupply.com/` verified by HTML file and `sitemap.xml` submitted; Bing Webmaster Tools set up (owner, 2026-10-19).
 - [x] Postal code 122003 confirmed by owner (2026-10-19). No Google Business Profile exists yet; create one, then add its URL to `sameAs`.
-- [ ] Keep adding blog posts (target 2 to 4 per month; 10 published as of 2026-10-20) and area pages for new NCR pockets.
+- [x] Search Console connected to Claude Code (local `mcp-search-console` 0.4.2 with a read-only service account on `sc-domain:jpprosupply.com`, 2026-11-13), so rankings, indexing and crawl dates can be read directly. The Links (backlinks) report is not exposed by the API; it is only on the Search Console website.
+- [ ] Keep adding blog posts (target 2 to 4 per month; 15 published as of 2026-11-15) and area pages for new NCR pockets. Search Console shows brand-comparison posts ("X vs Y vs Z, which is better") draw the most impressions, so favour that format; five were added on 2026-11-15.
+- [ ] Owner to review the switch range tiers and relative brand price order in the 2026-11-15 comparison posts against current price lists.
 
 ## Key Decisions
 | Date | Decision | Why |

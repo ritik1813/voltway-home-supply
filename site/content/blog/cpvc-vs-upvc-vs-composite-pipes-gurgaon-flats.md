@@ -2,9 +2,10 @@
 title: "CPVC vs UPVC vs composite pipes: which plumbing pipe for a flat in Gurgaon?"
 description: "Where CPVC, UPVC and composite (PPR or multilayer) pipes each belong in a Gurgaon flat, how they handle hot water, hard water and pressure, what they cost relative to each other, the brands plumbers trust (Astral, Ashirvad, Supreme) and the mistakes that cause leaks inside walls."
 date: 2026-10-19
+updated: 2026-11-15
 category: Plumbing
 keywords: cpvc vs upvc, cpvc pipe for hot water, composite pipe vs cpvc, best cpvc brand india, astral vs ashirvad, plumbing pipe for flat gurgaon, ppr pipe
-related: plumbing-material-supplier-gurgaon, bathroom-renovation-plumbing-material-checklist
+related: astral-vs-ashirvad-vs-supreme-cpvc-pipes, plumbing-material-supplier-gurgaon, bathroom-renovation-plumbing-material-checklist
 ---
 
 Pipes are the one plumbing item you cannot change your mind about later. Once the CPVC is inside the wall and the tiles are on, a leak means breaking the bathroom. So the pipe choice deserves ten minutes of thought before the plumber's list is approved. Here is where each type belongs in a Gurgaon flat.
@@ -53,7 +54,7 @@ Undersizing the down-take is the usual reason a top-floor flat loses pressure wh
 
 ## Brands
 
-**Astral** popularised CPVC in India and remains the most-specified. **Ashirvad (Aliaxis)** is the other premium name, favoured by many Gurgaon consultants. **Supreme**, **Prince** and **Finolex** are reliable and a little lower in price. For composite and PPR, Astral, Ashirvad and Supreme all have ranges, as do several imported brands.
+**Astral** popularised CPVC in India and remains the most-specified. **Ashirvad (Aliaxis)** is the other premium name, favoured by many Gurgaon consultants. **Supreme**, **Prince** and **Finolex** are reliable and a little lower in price. For composite and PPR, Astral, Ashirvad and Supreme all have ranges, as do several imported brands. We compare the three main CPVC makes in [Astral vs Ashirvad vs Supreme](/blog/astral-vs-ashirvad-vs-supreme-cpvc-pipes/).
 
 Fakes are less common than in wire but exist. Genuine pipe carries the brand, size, class and IS mark printed along its length, and the pack carries a hologram. Buy through an authorised dealer with a GST invoice.
 

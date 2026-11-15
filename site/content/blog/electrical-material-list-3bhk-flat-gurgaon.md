@@ -2,9 +2,10 @@
 title: "Electrical material list for a 3BHK flat in Gurgaon: what you actually need to buy"
 description: "A room-by-room electrical material checklist for a typical 3BHK apartment in Gurgaon or NCR: wire quantities by size, switch and socket counts, MCBs, DB, lighting, fans and conduit, with notes on where owners overspend."
 date: 2026-10-19
+updated: 2026-11-15
 category: Electrical
 keywords: electrical material list 3bhk, electrical material for flat gurgaon, house wiring material list, wire quantity 3bhk, electrical BOQ flat
-related: electrical-material-supplier-gurgaon, polycab-vs-havells-vs-finolex-house-wire, mcb-rccb-distribution-board-sizing-flat, bldc-vs-normal-ceiling-fan-gurgaon
+related: legrand-vs-schneider-vs-anchor-vs-gm-modular-switches, electrical-material-supplier-gurgaon, polycab-vs-havells-vs-finolex-house-wire, mcb-rccb-distribution-board-sizing-flat, bldc-vs-normal-ceiling-fan-gurgaon
 ---
 
 Most 3BHK owners in Gurgaon get their electrical list from the electrician the night before he wants to start, as a handwritten slip with brand names missing and quantities rounded up. This guide gives you the list in advance so you can get it quoted properly, understand what each item does, and spot where the quantities are padded.
@@ -39,7 +40,7 @@ Count points room by room. A realistic 3BHK comes to:
 - **TV, data and telephone points:** 4 to 6.
 - **Bell push and chime:** 1 set.
 
-Switch brands are sold by series. Anchor Roma Urban or Havells Crabtree at the value end, GM Modular and Wipro in the middle, Legrand Myrius, Schneider Livia or Zencelo and Anchor Penta at the designer end. The module count is the same whichever series you pick; the plates and support frames are series-specific, so decide the series before ordering boxes.
+Switch brands are sold by series. Anchor Penta and Ziva and GM G-Magic sit at the value end; Anchor Roma, Legrand Lyncus and Schneider Opale in the middle; Legrand Myrius and Arteor and Schneider ZENcelo and Unica at the designer end. The module count is the same whichever series you pick; the plates and support frames are series-specific, so decide the series before ordering boxes. The brands are compared in [Legrand vs Schneider vs Anchor vs GM](/blog/legrand-vs-schneider-vs-anchor-vs-gm-modular-switches/).
 
 ## 3. MCBs, RCCB and distribution board
 
