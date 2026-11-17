@@ -12,6 +12,9 @@ export const business = {
   whatsappNumber: '919310765871',
   email: 'contact@jpprosupply.com',
   gstin: '06CJAPS4363K1ZX',
+  // Lead tracking (public/static/track.js). Leave an ID empty to keep that tool switched off.
+  // ga4Id looks like 'G-XXXXXXXXXX' (Google Analytics 4); clarityId is the short Microsoft Clarity project ID.
+  analytics: { ga4Id: '', clarityId: '' },
   address: {
     streetAddress: 'Sector 52',
     addressLocality: 'Gurugram',

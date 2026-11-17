@@ -8,7 +8,7 @@ import { marked } from 'marked';
 import { business, faqs as homeFaqs } from '../site/data/business.mjs';
 import { services } from '../site/data/services.mjs';
 import { areas, areasIntro } from '../site/data/areas.mjs';
-import { layout, esc, ctaBand, faqBlock, breadcrumbHtml, breadcrumbLd, sidebar } from '../site/templates/layout.mjs';
+import { layout, esc, ctaBand, faqBlock, breadcrumbHtml, breadcrumbLd, sidebar, trackingTags } from '../site/templates/layout.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
@@ -115,7 +115,11 @@ function webPageLd(pathname, name, description, extra = {}) {
   const html = fs.readFileSync(indexFile, 'utf8');
   const shell = '<div id="root"></div>';
   if (!html.includes(shell)) throw new Error('dist/index.html: #root placeholder not found');
-  fs.writeFileSync(indexFile, html.replace(shell, `<div id="root">${render()}</div>`));
+  if (!html.includes('</head>')) throw new Error('dist/index.html: </head> not found');
+  fs.writeFileSync(
+    indexFile,
+    html.replace('</head>', `${trackingTags()}\n</head>`).replace(shell, `<div id="root">${render()}</div>`),
+  );
 }
 
 // ---------- Blog ----------

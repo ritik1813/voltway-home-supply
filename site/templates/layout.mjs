@@ -13,10 +13,16 @@ const nav = [
   ['/blog/', 'Blog'],
 ];
 
+// Script tags for the lead-tracking layer; used by the generated pages and injected into the home page at build time.
+export function trackingTags() {
+  const cfg = { ga4: business.analytics.ga4Id || '', clarity: business.analytics.clarityId || '' };
+  return `<script>window.JP_TRACK=${JSON.stringify(cfg)};</script>\n<script defer src="/static/track.js"></script>`;
+}
+
 export function ctaBand(context) {
   const msg = `Hi JP Pro Supply, I'm reading your page on ${context}. I'd like a quote for my material list.`;
   return `
-<section class="cta" aria-label="Get a quote">
+<section class="cta" aria-label="Get a quote" data-track="CTA">
   <div>
     <h2>Send your BOQ or material list. Get a brand-wise quote.</h2>
     <p>Flat, site or full project. We quote against your actual list at current trade rates and deliver across Gurgaon and NCR, usually within a day.</p>
@@ -58,7 +64,7 @@ export function breadcrumbLd(crumbs) {
 export function sidebar({ related = [], context }) {
   const msg = `Hi JP Pro Supply, I'm reading your page on ${context}. I'd like a quote for my material list.`;
   return `
-<aside class="sidebar">
+<aside class="sidebar" data-track="SIDE">
   <div class="card">
     <h3>Get a quote</h3>
     <p class="nap">Send your material list or BOQ. Brand-wise quote at trade rates, delivery across Gurgaon &amp; NCR.</p>
@@ -113,6 +119,7 @@ ${modifiedTime ? `<meta property="article:modified_time" content="${modifiedTime
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
 <script defer src="/_vercel/insights/script.js"></script>
+${trackingTags()}
 </head>
 <body>
 <header class="site-header">

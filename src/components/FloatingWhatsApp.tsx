@@ -11,7 +11,8 @@ export function FloatingWhatsApp() {
   const handleSend = (event: FormEvent) => {
     event.preventDefault();
     const text = message.trim() || GREETING;
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(window.jpTrack ? window.jpTrack.wa(url, 'CHAT') : url, '_blank');
     setMessage('');
     setOpen(false);
   };

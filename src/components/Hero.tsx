@@ -66,7 +66,7 @@ export function Hero() {
             for every project, a single flat to a full tower, from one supplier at the best trade rates.
           </p>
           <div className="hero-actions">
-            <a href="#quote" className="btn btn-primary">Start Your Project With Us</a>
+            <a href="#quote" className="btn btn-primary">Get a Quote</a>
             <a href="https://wa.me/919310765871" className="btn btn-light">
               <WhatsAppIcon />
               Chat on WhatsApp

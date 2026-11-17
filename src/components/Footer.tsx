@@ -42,8 +42,8 @@ export function Footer() {
           <div className="footer-col">
             <h5>Get in touch</h5>
             <ul>
-              <li>+91 93107 65871</li>
-              <li>contact@jpprosupply.com</li>
+              <li><a href="tel:+919310765871">+91 93107 65871</a></li>
+              <li><a href="mailto:contact@jpprosupply.com">contact@jpprosupply.com</a></li>
               <li>Gurgaon &amp; NCR</li>
               <li>Mon–Sat, 9:30am–7:30pm</li>
             </ul>

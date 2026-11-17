@@ -20,7 +20,7 @@ interface PrefillState {
 export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
   const [role, setRole] = useState(ROLES[0]);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [submitBtnText, setSubmitBtnText] = useState('Start My Project');
+  const [submitBtnText, setSubmitBtnText] = useState('Get My Quote');
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
   const [filePreview, setFilePreview] = useState<string | null>(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -105,7 +105,15 @@ export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
       'Sent from jpprosupply.com',
     ].filter((line): line is string => line !== null);
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
-    window.open(url, '_blank', 'noopener');
+    // Records the submission (role and categories only, never the name or phone) and adds the reference code.
+    const tracked = window.jpTrack
+      ? window.jpTrack.wa(url, 'FORM', 'quote_form_submit', {
+          role,
+          categories: selectedCategories.join('+') || 'none',
+          has_file: uploadedFile !== null,
+        })
+      : url;
+    window.open(tracked, '_blank', 'noopener');
   };
 
   return (
@@ -130,7 +138,7 @@ export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
                 </div>
                 <div>
                   <strong>Call or WhatsApp</strong>
-                  <span>+91 93107 65871</span>
+                  <span><a href="tel:+919310765871" style={{ color: 'inherit', textDecoration: 'none' }}>+91 93107 65871</a></span>
                 </div>
               </div>
               <div className="info-row">
@@ -141,7 +149,7 @@ export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
                 </div>
                 <div>
                   <strong>Email</strong>
-                  <span>contact@jpprosupply.com</span>
+                  <span><a href="mailto:contact@jpprosupply.com" style={{ color: 'inherit', textDecoration: 'none' }}>contact@jpprosupply.com</a></span>
                 </div>
               </div>
               <div className="info-row">
@@ -171,7 +179,7 @@ export function QuoteForm({ prefill }: { prefill?: PrefillState }) {
             </div>
           </div>
 
-          <form className="quote-form" onSubmit={handleSubmit}>
+          <form className="quote-form" onSubmit={handleSubmit} data-clarity-mask="true">
             <div className="form-row">
               <div className="field">
                 <label>Full Name</label>
